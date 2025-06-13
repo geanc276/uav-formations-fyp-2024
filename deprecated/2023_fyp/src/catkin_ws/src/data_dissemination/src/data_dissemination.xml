@@ -1,0 +1,13 @@
+<library path="lib/libdata_dissemination">
+  <class name="data_dissemination/BeaconingClientNodelet" type="data_dissemination::BeaconingClientNodelet" base_class_type="nodelet::Nodelet">
+  <description>
+  This is the Beaconing client nodelet.
+  </description>
+  </class>
+
+  <class name="data_dissemination/SRPClientNodelet" type="data_dissemination::SRPClientNodelet" base_class_type="nodelet::Nodelet">
+  <description>
+  This is the SRP client nodelet.
+  </description>
+  </class>
+</library>

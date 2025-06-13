@@ -1,0 +1,186 @@
+\hypertarget{classVarDisQueue}{}\doxysection{Var\+Dis\+Queue Class Reference}
+\label{classVarDisQueue}\index{VarDisQueue@{VarDisQueue}}
+
+
+Inheritance diagram for Var\+Dis\+Queue\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classVarDisQueue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Var\+Dis\+Queue\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classVarDisQueue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVarDisQueue_aa99a64f5beafcc6369cb4c181e3ebc66}\label{classVarDisQueue_aa99a64f5beafcc6369cb4c181e3ebc66}} 
+\mbox{\hyperlink{classVarDisQueue_aa99a64f5beafcc6369cb4c181e3ebc66}{Var\+Dis\+Queue}} (TString queue\+Name)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} Object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVarDisQueue_aaddaa4ef951c122e410cebf78a8002f7}\label{classVarDisQueue_aaddaa4ef951c122e410cebf78a8002f7}} 
+void \mbox{\hyperlink{classVarDisQueue_aaddaa4ef951c122e410cebf78a8002f7}{q\+Drop\+Nonexisting\+Deleted}} ()
+\begin{DoxyCompactList}\small\item\em Drops elements from the queue that don\textquotesingle{}t exist in the DB or are marked as to\+Be\+Deleted in the DB. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVarDisQueue_a21c80b9a2fc680ce5f4659ea0a266ebc}\label{classVarDisQueue_a21c80b9a2fc680ce5f4659ea0a266ebc}} 
+void \mbox{\hyperlink{classVarDisQueue_a21c80b9a2fc680ce5f4659ea0a266ebc}{q\+Drop\+Nonexisting}} ()
+\begin{DoxyCompactList}\small\item\em Drops elements from the queue that don\textquotesingle{}t exist in the DB. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVarDisQueue_ae6ab0d3197dcbac57c2729fa3d90bcb0}\label{classVarDisQueue_ae6ab0d3197dcbac57c2729fa3d90bcb0}} 
+void \mbox{\hyperlink{classVarDisQueue_ae6ab0d3197dcbac57c2729fa3d90bcb0}{q\+Drop\+Deleted}} ()
+\begin{DoxyCompactList}\small\item\em Drops elements from the queue that are marked as to\+Be\+Deleted in the DB. \end{DoxyCompactList}\item 
+Var\+Id \mbox{\hyperlink{classVarDisQueue_a59360d5b7498a230bdacd07491f9325f}{q\+Take}} ()
+\begin{DoxyCompactList}\small\item\em Removes and returns the first element of the queue. \end{DoxyCompactList}\item 
+Var\+Id \mbox{\hyperlink{classVarDisQueue_a8955bc1821a84c972d61b659a18e98e2}{q\+Peek}} ()
+\begin{DoxyCompactList}\small\item\em Returns the first element of the queue without removing it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisQueue_a15385b9d62cb8714311d8e3f0442ecf1}{q\+Append}} (Var\+Id var\+Id)
+\begin{DoxyCompactList}\small\item\em Appends a new element to the end of the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisQueue_ad86ed7379d2a294dccc2fa7a9f93d648}{q\+Remove}} (Var\+Id var\+Id)
+\begin{DoxyCompactList}\small\item\em Removes all occurrences of a specific Var\+Id from the queue. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classVarDisQueue_a4390afbd3477a4d77fb41212496a17a1}{q\+Is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the queue is empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classVarDisQueue_aad65aa61d2fb5980168d3c0057193d16}{q\+Exists}} (Var\+Id var\+Id)
+\begin{DoxyCompactList}\small\item\em Checks if a specific Var\+Id exists in the queue. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classVarDisQueue_a83dc535ebba97ec169ada43309f0c46d}{q\+Length}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of elements in the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisQueue_ab2c9459cb1a4d161372df2bf08790f21}{print\+Queue}} ()
+\begin{DoxyCompactList}\small\item\em Prints all elements of the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisQueue_a0d111ba30c1e2f1c6a317c8d1e7a37a3}{set\+Database\+Manager}} (\mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} $\ast$db\+Manager)
+\begin{DoxyCompactList}\small\item\em A simple setter, sets the database instance to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVarDisQueue_ab2c9459cb1a4d161372df2bf08790f21}\label{classVarDisQueue_ab2c9459cb1a4d161372df2bf08790f21}} 
+\index{VarDisQueue@{VarDisQueue}!printQueue@{printQueue}}
+\index{printQueue@{printQueue}!VarDisQueue@{VarDisQueue}}
+\doxysubsubsection{\texorpdfstring{printQueue()}{printQueue()}}
+{\footnotesize\ttfamily void Var\+Dis\+Queue\+::print\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints all elements of the queue. 
+
+This function prints all elements of the queue to the standard output stream. The elements are printed separated by spaces, followed by a newline character. If the queue is empty, only a newline character is printed. \mbox{\Hypertarget{classVarDisQueue_a15385b9d62cb8714311d8e3f0442ecf1}\label{classVarDisQueue_a15385b9d62cb8714311d8e3f0442ecf1}} 
+\index{VarDisQueue@{VarDisQueue}!qAppend@{qAppend}}
+\index{qAppend@{qAppend}!VarDisQueue@{VarDisQueue}}
+\doxysubsubsection{\texorpdfstring{qAppend()}{qAppend()}}
+{\footnotesize\ttfamily void Var\+Dis\+Queue\+::q\+Append (\begin{DoxyParamCaption}\item[{Var\+Id}]{var\+Id }\end{DoxyParamCaption})}
+
+
+
+Appends a new element to the end of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var\+Id} & The Var\+Id to be appended to the queue. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVarDisQueue_aad65aa61d2fb5980168d3c0057193d16}\label{classVarDisQueue_aad65aa61d2fb5980168d3c0057193d16}} 
+\index{VarDisQueue@{VarDisQueue}!qExists@{qExists}}
+\index{qExists@{qExists}!VarDisQueue@{VarDisQueue}}
+\doxysubsubsection{\texorpdfstring{qExists()}{qExists()}}
+{\footnotesize\ttfamily bool Var\+Dis\+Queue\+::q\+Exists (\begin{DoxyParamCaption}\item[{Var\+Id}]{var\+Id }\end{DoxyParamCaption})}
+
+
+
+Checks if a specific Var\+Id exists in the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var\+Id} & The Var\+Id to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if var\+Id exists in the queue, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVarDisQueue_a4390afbd3477a4d77fb41212496a17a1}\label{classVarDisQueue_a4390afbd3477a4d77fb41212496a17a1}} 
+\index{VarDisQueue@{VarDisQueue}!qIsEmpty@{qIsEmpty}}
+\index{qIsEmpty@{qIsEmpty}!VarDisQueue@{VarDisQueue}}
+\doxysubsubsection{\texorpdfstring{qIsEmpty()}{qIsEmpty()}}
+{\footnotesize\ttfamily bool Var\+Dis\+Queue\+::q\+Is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the queue is empty. 
+
+\begin{DoxyReturn}{Returns}
+true if the queue is empty, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVarDisQueue_a83dc535ebba97ec169ada43309f0c46d}\label{classVarDisQueue_a83dc535ebba97ec169ada43309f0c46d}} 
+\index{VarDisQueue@{VarDisQueue}!qLength@{qLength}}
+\index{qLength@{qLength}!VarDisQueue@{VarDisQueue}}
+\doxysubsubsection{\texorpdfstring{qLength()}{qLength()}}
+{\footnotesize\ttfamily size\+\_\+t Var\+Dis\+Queue\+::q\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the number of elements in the queue. 
+
+\begin{DoxyReturn}{Returns}
+The number of elements in the queue. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVarDisQueue_a8955bc1821a84c972d61b659a18e98e2}\label{classVarDisQueue_a8955bc1821a84c972d61b659a18e98e2}} 
+\index{VarDisQueue@{VarDisQueue}!qPeek@{qPeek}}
+\index{qPeek@{qPeek}!VarDisQueue@{VarDisQueue}}
+\doxysubsubsection{\texorpdfstring{qPeek()}{qPeek()}}
+{\footnotesize\ttfamily Var\+Id Var\+Dis\+Queue\+::q\+Peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the first element of the queue without removing it. 
+
+\begin{DoxyReturn}{Returns}
+The first element of the queue if the queue is not empty, otherwise returns an invalid Var\+Id. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVarDisQueue_ad86ed7379d2a294dccc2fa7a9f93d648}\label{classVarDisQueue_ad86ed7379d2a294dccc2fa7a9f93d648}} 
+\index{VarDisQueue@{VarDisQueue}!qRemove@{qRemove}}
+\index{qRemove@{qRemove}!VarDisQueue@{VarDisQueue}}
+\doxysubsubsection{\texorpdfstring{qRemove()}{qRemove()}}
+{\footnotesize\ttfamily void Var\+Dis\+Queue\+::q\+Remove (\begin{DoxyParamCaption}\item[{Var\+Id}]{var\+Id }\end{DoxyParamCaption})}
+
+
+
+Removes all occurrences of a specific Var\+Id from the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var\+Id} & The Var\+Id to be removed from the queue. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVarDisQueue_a59360d5b7498a230bdacd07491f9325f}\label{classVarDisQueue_a59360d5b7498a230bdacd07491f9325f}} 
+\index{VarDisQueue@{VarDisQueue}!qTake@{qTake}}
+\index{qTake@{qTake}!VarDisQueue@{VarDisQueue}}
+\doxysubsubsection{\texorpdfstring{qTake()}{qTake()}}
+{\footnotesize\ttfamily Var\+Id Var\+Dis\+Queue\+::q\+Take (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes and returns the first element of the queue. 
+
+\begin{DoxyReturn}{Returns}
+The first element of the queue if the queue is not empty, otherwise returns an invalid Var\+Id. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVarDisQueue_a0d111ba30c1e2f1c6a317c8d1e7a37a3}\label{classVarDisQueue_a0d111ba30c1e2f1c6a317c8d1e7a37a3}} 
+\index{VarDisQueue@{VarDisQueue}!setDatabaseManager@{setDatabaseManager}}
+\index{setDatabaseManager@{setDatabaseManager}!VarDisQueue@{VarDisQueue}}
+\doxysubsubsection{\texorpdfstring{setDatabaseManager()}{setDatabaseManager()}}
+{\footnotesize\ttfamily void Var\+Dis\+Queue\+::set\+Database\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} $\ast$}]{db\+Manager }\end{DoxyParamCaption})}
+
+
+
+A simple setter, sets the database instance to use. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+Manager} & The instance of the database to use \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/dcp/Var\+Dis\+Queue.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,12 @@
+- a python script that creates htpp access point to interact with the drone over the internet
+- available access points:
+-- start_executable [POST], executable_name
+
+
+-- helpers
+--- response class
+--- auth
+
+
+-- basic process for introducing a new one:
+--- (finish this pls)

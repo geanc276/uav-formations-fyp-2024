@@ -1,0 +1,263 @@
+\hypertarget{classDatabaseManager}{}\doxysection{Database\+Manager Class Reference}
+\label{classDatabaseManager}\index{DatabaseManager@{DatabaseManager}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDatabaseManager_aa162d97472e6c31a4e873adda435dbb6}\label{classDatabaseManager_aa162d97472e6c31a4e873adda435dbb6}} 
+\mbox{\hyperlink{classDatabaseManager_aa162d97472e6c31a4e873adda435dbb6}{Database\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_aa3788001e7f2729c3935852560e380bd}{set\+Queues}} (\mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} $\ast$createQ, \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} $\ast$deleteQ, \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} $\ast$updateQ, \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} $\ast$summaryQ, \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} $\ast$req\+UpdQ, \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} $\ast$req\+CreateQ)
+\begin{DoxyCompactList}\small\item\em Sets the \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} pointers for the \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} to use This function assigns the provided \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} pointers to the corresponding member variables within the \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}}. These queues will be used by the \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} to perform various operations related to queue management. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDatabaseManager_ae9b3a5da1e04fbb00faf8a034da1d063}\label{classDatabaseManager_ae9b3a5da1e04fbb00faf8a034da1d063}} 
+\mbox{\hyperlink{classDatabaseManager_ae9b3a5da1e04fbb00faf8a034da1d063}{$\sim$\+Database\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} class. \end{DoxyCompactList}\item 
+tbb\+::concurrent\+\_\+unordered\+\_\+map$<$ Var\+Id, \mbox{\hyperlink{structDBEntry}{DBEntry}} $>$ \mbox{\hyperlink{classDatabaseManager_adfaa940183fca82f7a83f7220b534add}{get\+Database\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Simple getter for the database instance. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDatabaseManager_a322de09b7aba8af88b2e5922a7599351}{create}} (\mbox{\hyperlink{structVarSpec}{Var\+Spec}} spec, Var\+Len length, std\+::vector$<$ uint8\+\_\+t $>$ value)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{structDBEntry}{DBEntry}} record into the database. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDatabaseManager_a63c2a3f1710ee943ebd63525fbf65569}{update\+DBEntry\+By\+Id}} (Var\+Id var\+Id, Var\+Len var\+Len, const std\+::vector$<$ uint8\+\_\+t $>$ \&value)
+\begin{DoxyCompactList}\small\item\em Updates a \mbox{\hyperlink{structDBEntry}{DBEntry}} record in the database. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDatabaseManager_a915154592a6c9c1ced858c68e5199c20}{update}} (\mbox{\hyperlink{structDBEntry}{DBEntry}} db\+Entry)
+\begin{DoxyCompactList}\small\item\em Updates a \mbox{\hyperlink{structDBEntry}{DBEntry}} record in the database. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDatabaseManager_ac46a168c711b9d34ae590464d0edb6e2}{delete\+DBEntry\+By\+Id}} (Var\+Id var\+Id)
+\begin{DoxyCompactList}\small\item\em Prepares to delete a \mbox{\hyperlink{structDBEntry}{DBEntry}} record from the database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_aa50e240316a31ba106e6c0f260e824b2}{remove}} (Var\+Id var\+Id)
+\begin{DoxyCompactList}\small\item\em Deletes a \mbox{\hyperlink{structDBEntry}{DBEntry}} record from the database. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structDBEntry}{DBEntry}} $>$ \mbox{\hyperlink{classDatabaseManager_ab16cfa99c3c81657123b13feda55d03a}{get\+All\+DBEntries}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all \mbox{\hyperlink{structDBEntry}{DBEntry}} records from the database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDBEntry}{DBEntry}} \mbox{\hyperlink{classDatabaseManager_aeb92bb31e53a589733eb6e2073d6e480}{lookup}} (int Var\+Id)
+\begin{DoxyCompactList}\small\item\em Retrieves a \mbox{\hyperlink{structDBEntry}{DBEntry}} from the database based on its Var\+Id. \end{DoxyCompactList}\item 
+Var\+Id \mbox{\hyperlink{classDatabaseManager_a2a9a2cc376baa8bb62ef75f8fad6ecec}{get\+Next\+Available\+Var\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the next available Var\+Id (unique identifier) from the database For example if the highest Var\+Id in the database is currently 9, this will return 10. \end{DoxyCompactList}\item 
+std\+::tuple$<$ Var\+Dis\+Status\+Codes, \mbox{\hyperlink{structReadReturnDetails}{Read\+Return\+Details}} $>$ \mbox{\hyperlink{classDatabaseManager_a4150c158cfab85324d3d3eaa6606303d}{read}} (Var\+Id var\+Id)
+\begin{DoxyCompactList}\small\item\em Reads the details of a variable from the database. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classDatabaseManager_a9df36cd42e02ebcb93f707745d845bbc}{print\+Results}} (const std\+::vector$<$ T $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Template function to print the results of database queries. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDatabaseManager_a322de09b7aba8af88b2e5922a7599351}\label{classDatabaseManager_a322de09b7aba8af88b2e5922a7599351}} 
+\index{DatabaseManager@{DatabaseManager}!create@{create}}
+\index{create@{create}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily int Database\+Manager\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVarSpec}{Var\+Spec}}}]{spec,  }\item[{Var\+Len}]{length,  }\item[{std\+::vector$<$ uint8\+\_\+t $>$}]{value }\end{DoxyParamCaption})}
+
+
+
+Create a \mbox{\hyperlink{structDBEntry}{DBEntry}} record into the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spec} & A \mbox{\hyperlink{structVarSpec}{Var\+Spec}} structure containing information about the producer ID, repetition count, and description. \\
+\hline
+{\em length} & The length of the variable, corresponding to the size of the binary data stored in the \textquotesingle{}Value\textquotesingle{} column. \\
+\hline
+{\em value} & A vector of bytes (uint8\+\_\+t) containing the binary data to be stored in the database. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The appropriate VARDIS\+\_\+\+STATUS code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabaseManager_ac46a168c711b9d34ae590464d0edb6e2}\label{classDatabaseManager_ac46a168c711b9d34ae590464d0edb6e2}} 
+\index{DatabaseManager@{DatabaseManager}!deleteDBEntryById@{deleteDBEntryById}}
+\index{deleteDBEntryById@{deleteDBEntryById}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{deleteDBEntryById()}{deleteDBEntryById()}}
+{\footnotesize\ttfamily bool Database\+Manager\+::delete\+DBEntry\+By\+Id (\begin{DoxyParamCaption}\item[{Var\+Id}]{var\+Id }\end{DoxyParamCaption})}
+
+
+
+Prepares to delete a \mbox{\hyperlink{structDBEntry}{DBEntry}} record from the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Var\+Id} & The unique identifier of the \mbox{\hyperlink{structDBEntry}{DBEntry}} record to delete. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The appropriate VARDIS\+\_\+\+STATUS code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabaseManager_ab16cfa99c3c81657123b13feda55d03a}\label{classDatabaseManager_ab16cfa99c3c81657123b13feda55d03a}} 
+\index{DatabaseManager@{DatabaseManager}!getAllDBEntries@{getAllDBEntries}}
+\index{getAllDBEntries@{getAllDBEntries}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{getAllDBEntries()}{getAllDBEntries()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structDBEntry}{DBEntry}}$>$ Database\+Manager\+::get\+All\+DBEntries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves all \mbox{\hyperlink{structDBEntry}{DBEntry}} records from the database. 
+
+\begin{DoxyReturn}{Returns}
+A vector containing all \mbox{\hyperlink{structDBEntry}{DBEntry}} records in the database. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabaseManager_adfaa940183fca82f7a83f7220b534add}\label{classDatabaseManager_adfaa940183fca82f7a83f7220b534add}} 
+\index{DatabaseManager@{DatabaseManager}!getDatabaseInstance@{getDatabaseInstance}}
+\index{getDatabaseInstance@{getDatabaseInstance}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{getDatabaseInstance()}{getDatabaseInstance()}}
+{\footnotesize\ttfamily tbb\+::concurrent\+\_\+unordered\+\_\+map$<$Var\+Id, \mbox{\hyperlink{structDBEntry}{DBEntry}}$>$ Database\+Manager\+::get\+Database\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Simple getter for the database instance. 
+
+\begin{DoxyReturn}{Returns}
+The database instance currently in use 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabaseManager_a2a9a2cc376baa8bb62ef75f8fad6ecec}\label{classDatabaseManager_a2a9a2cc376baa8bb62ef75f8fad6ecec}} 
+\index{DatabaseManager@{DatabaseManager}!getNextAvailableVarId@{getNextAvailableVarId}}
+\index{getNextAvailableVarId@{getNextAvailableVarId}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{getNextAvailableVarId()}{getNextAvailableVarId()}}
+{\footnotesize\ttfamily Var\+Id Database\+Manager\+::get\+Next\+Available\+Var\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the next available Var\+Id (unique identifier) from the database For example if the highest Var\+Id in the database is currently 9, this will return 10. 
+
+\begin{DoxyReturn}{Returns}
+The Var\+Id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabaseManager_aeb92bb31e53a589733eb6e2073d6e480}\label{classDatabaseManager_aeb92bb31e53a589733eb6e2073d6e480}} 
+\index{DatabaseManager@{DatabaseManager}!lookup@{lookup}}
+\index{lookup@{lookup}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{lookup()}{lookup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDBEntry}{DBEntry}} Database\+Manager\+::lookup (\begin{DoxyParamCaption}\item[{int}]{Var\+Id }\end{DoxyParamCaption})}
+
+
+
+Retrieves a \mbox{\hyperlink{structDBEntry}{DBEntry}} from the database based on its Var\+Id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Var\+Id} & The identifier of the \mbox{\hyperlink{structDBEntry}{DBEntry}} to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Variable object if found, otherwise an empty Variable object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabaseManager_a9df36cd42e02ebcb93f707745d845bbc}\label{classDatabaseManager_a9df36cd42e02ebcb93f707745d845bbc}} 
+\index{DatabaseManager@{DatabaseManager}!printResults@{printResults}}
+\index{printResults@{printResults}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{printResults()}{printResults()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Database\+Manager\+::print\+Results (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Template function to print the results of database queries. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of data to print. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The vector containing the data to print. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDatabaseManager_a4150c158cfab85324d3d3eaa6606303d}\label{classDatabaseManager_a4150c158cfab85324d3d3eaa6606303d}} 
+\index{DatabaseManager@{DatabaseManager}!read@{read}}
+\index{read@{read}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily std\+::tuple$<$Var\+Dis\+Status\+Codes, \mbox{\hyperlink{structReadReturnDetails}{Read\+Return\+Details}}$>$ Database\+Manager\+::read (\begin{DoxyParamCaption}\item[{Var\+Id}]{var\+Id }\end{DoxyParamCaption})}
+
+
+
+Reads the details of a variable from the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var\+Id} & The Var\+Id of the variable to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tuple containing the status code and the details of the variable.
+\begin{DoxyItemize}
+\item If the variable does not exist, returns VARDIS\+\_\+\+STATUS\+\_\+\+VARIABLE\+\_\+\+DOES\+\_\+\+NOT\+\_\+\+EXIST along with an empty \mbox{\hyperlink{structReadReturnDetails}{Read\+Return\+Details}}.
+\item If the variable is being deleted, returns VARDIS\+\_\+\+STATUS\+\_\+\+VARIABLE\+\_\+\+BEING\+\_\+\+DELETED along with an empty \mbox{\hyperlink{structReadReturnDetails}{Read\+Return\+Details}}.
+\item If the read operation is successful, returns VARDIS\+\_\+\+STATUS\+\_\+\+OK along with the details of the variable (length, value, timestamp). 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabaseManager_aa50e240316a31ba106e6c0f260e824b2}\label{classDatabaseManager_aa50e240316a31ba106e6c0f260e824b2}} 
+\index{DatabaseManager@{DatabaseManager}!remove@{remove}}
+\index{remove@{remove}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Database\+Manager\+::remove (\begin{DoxyParamCaption}\item[{Var\+Id}]{var\+Id }\end{DoxyParamCaption})}
+
+
+
+Deletes a \mbox{\hyperlink{structDBEntry}{DBEntry}} record from the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Var\+Id} & The unique identifier of the \mbox{\hyperlink{structDBEntry}{DBEntry}} record to delete. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDatabaseManager_aa3788001e7f2729c3935852560e380bd}\label{classDatabaseManager_aa3788001e7f2729c3935852560e380bd}} 
+\index{DatabaseManager@{DatabaseManager}!setQueues@{setQueues}}
+\index{setQueues@{setQueues}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{setQueues()}{setQueues()}}
+{\footnotesize\ttfamily void Database\+Manager\+::set\+Queues (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} $\ast$}]{createQ,  }\item[{\mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} $\ast$}]{deleteQ,  }\item[{\mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} $\ast$}]{updateQ,  }\item[{\mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} $\ast$}]{summaryQ,  }\item[{\mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} $\ast$}]{req\+UpdQ,  }\item[{\mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} $\ast$}]{req\+CreateQ }\end{DoxyParamCaption})}
+
+
+
+Sets the \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} pointers for the \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} to use This function assigns the provided \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} pointers to the corresponding member variables within the \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}}. These queues will be used by the \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} to perform various operations related to queue management. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em createQ} & Pointer to the \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} \\
+\hline
+{\em deleteQ} & Pointer to the \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} \\
+\hline
+{\em updateQ} & Pointer to the \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} \\
+\hline
+{\em summaryQ} & Pointer to the \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} \\
+\hline
+{\em req\+UpdQ} & Pointer to the \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} \\
+\hline
+{\em req\+CreateQ} & Pointer to the \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDatabaseManager_a915154592a6c9c1ced858c68e5199c20}\label{classDatabaseManager_a915154592a6c9c1ced858c68e5199c20}} 
+\index{DatabaseManager@{DatabaseManager}!update@{update}}
+\index{update@{update}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily bool Database\+Manager\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDBEntry}{DBEntry}}}]{db\+Entry }\end{DoxyParamCaption})}
+
+
+
+Updates a \mbox{\hyperlink{structDBEntry}{DBEntry}} record in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{structDBEntry}{DBEntry}}} & The information of the \mbox{\hyperlink{structDBEntry}{DBEntry}} record to update. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDatabaseManager_a63c2a3f1710ee943ebd63525fbf65569}\label{classDatabaseManager_a63c2a3f1710ee943ebd63525fbf65569}} 
+\index{DatabaseManager@{DatabaseManager}!updateDBEntryById@{updateDBEntryById}}
+\index{updateDBEntryById@{updateDBEntryById}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{updateDBEntryById()}{updateDBEntryById()}}
+{\footnotesize\ttfamily bool Database\+Manager\+::update\+DBEntry\+By\+Id (\begin{DoxyParamCaption}\item[{Var\+Id}]{var\+Id,  }\item[{Var\+Len}]{var\+Len,  }\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Updates a \mbox{\hyperlink{structDBEntry}{DBEntry}} record in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Var\+Id} & The unique identifier of the \mbox{\hyperlink{structDBEntry}{DBEntry}} record to update. \\
+\hline
+{\em Var\+Len} & The length of the variable. \\
+\hline
+{\em Var\+Rep\+Cnt} & The repetition count of the variable. \\
+\hline
+{\em Var\+Seq\+No} & The sequence number of the variable. This is used as the identifier for the record to update. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the update is successful, otherwise false. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/dcp/Database\+Manager.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,64 @@
+\hypertarget{classBeaconingClient}{}\doxysection{Beaconing\+Client Class Reference}
+\label{classBeaconingClient}\index{BeaconingClient@{BeaconingClient}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBeaconingClient_ae483c50d732b3a03582dbd0546cc3660}\label{classBeaconingClient_ae483c50d732b3a03582dbd0546cc3660}} 
+{\bfseries Beaconing\+Client} (rclcpp\+::\+Publisher$<$ dcp\+\_\+msgs\+::msg\+::\+Query\+Number\+Buffered\+Payloads\+Response $>$\+::Shared\+Ptr, rclcpp\+::\+Publisher$<$ dcp\+\_\+msgs\+::msg\+::\+Receive\+Payload\+Indication $>$\+::Shared\+Ptr, rclcpp\+::\+Publisher$<$ dcp\+\_\+msgs\+::msg\+::\+Payload\+Transmitted\+Indication $>$\+::Shared\+Ptr)
+\item 
+\mbox{\Hypertarget{classBeaconingClient_adad5c2bbdbec6e57bebde3bc552a2327}\label{classBeaconingClient_adad5c2bbdbec6e57bebde3bc552a2327}} 
+bool {\bfseries l\+Protocol\+Exists} (\mbox{\hyperlink{structBPProtocolId}{BPProtocol\+Id}} $\ast$id)
+\item 
+\mbox{\Hypertarget{classBeaconingClient_a58f1783635d8888f2cedc872842cc0ab}\label{classBeaconingClient_a58f1783635d8888f2cedc872842cc0ab}} 
+void {\bfseries l\+Remove\+Protocol} (\mbox{\hyperlink{structBPProtocolId}{BPProtocol\+Id}} id)
+\item 
+\mbox{\Hypertarget{classBeaconingClient_aad122691ad516db43cd66fc31b39a802}\label{classBeaconingClient_aad122691ad516db43cd66fc31b39a802}} 
+\mbox{\hyperlink{structBPClientProtocol}{BPClient\+Protocol}} $\ast$ {\bfseries l\+Lookup\+Protocol} (\mbox{\hyperlink{structBPProtocolId}{BPProtocol\+Id}} id)
+\item 
+\mbox{\Hypertarget{classBeaconingClient_aa8c512fc0eef574d9dc1f0ad86c64088}\label{classBeaconingClient_aa8c512fc0eef574d9dc1f0ad86c64088}} 
+void {\bfseries query\+Number\+Buffered\+Payloads} (const dcp\+\_\+msgs\+::msg\+::\+Query\+Number\+Buffered\+Payloads\+Request \&request)
+\item 
+\mbox{\Hypertarget{classBeaconingClient_a06cd0de8cd663eb2dab220b374df1fb7}\label{classBeaconingClient_a06cd0de8cd663eb2dab220b374df1fb7}} 
+void {\bfseries register\+Protocol\+Callback} (const dcp\+\_\+msgs\+::msg\+::\+Register\+Protocol\+Request \&request)
+\item 
+\mbox{\Hypertarget{classBeaconingClient_ad26df2a3a6a77de9bafafde2541f3d81}\label{classBeaconingClient_ad26df2a3a6a77de9bafafde2541f3d81}} 
+int {\bfseries register\+Protocol} (const dcp\+\_\+msgs\+::msg\+::\+Register\+Protocol\+Request \&request)
+\item 
+\mbox{\Hypertarget{classBeaconingClient_ae99f2a4c724dc323c5b24710a8cbead0}\label{classBeaconingClient_ae99f2a4c724dc323c5b24710a8cbead0}} 
+void {\bfseries transmit\+Payload\+Callback} (const dcp\+\_\+msgs\+::msg\+::\+Transmit\+Payload\+Request \&msg)
+\item 
+\mbox{\Hypertarget{classBeaconingClient_a27acde734d9cd6a496126962db110c56}\label{classBeaconingClient_a27acde734d9cd6a496126962db110c56}} 
+int {\bfseries transmit\+Payload} (const dcp\+\_\+msgs\+::msg\+::\+Transmit\+Payload\+Request \&request)
+\item 
+\mbox{\Hypertarget{classBeaconingClient_ab27160c9dbb54899189aaab0908310e7}\label{classBeaconingClient_ab27160c9dbb54899189aaab0908310e7}} 
+void {\bfseries transmit\+Beacon} (int socket\+Fd)
+\item 
+\mbox{\Hypertarget{classBeaconingClient_a9c579b846fa8b0bd6b6f3671bfb9f7f8}\label{classBeaconingClient_a9c579b846fa8b0bd6b6f3671bfb9f7f8}} 
+void {\bfseries receive\+Beacon} ()
+\item 
+\mbox{\Hypertarget{classBeaconingClient_afc730584869b53e9b25f3181f3021973}\label{classBeaconingClient_afc730584869b53e9b25f3181f3021973}} 
+void {\bfseries init\+Beaconing\+Protocol} ()
+\item 
+\mbox{\Hypertarget{classBeaconingClient_a390562ff70e7d288b4c7249d33a1f2b2}\label{classBeaconingClient_a390562ff70e7d288b4c7249d33a1f2b2}} 
+void {\bfseries run\+Beaconing\+Transmit} ()
+\item 
+\mbox{\Hypertarget{classBeaconingClient_a4507d7266e00a5c36d987deb80e55dab}\label{classBeaconingClient_a4507d7266e00a5c36d987deb80e55dab}} 
+void {\bfseries run\+Beaconing\+Receive} ()
+\item 
+\mbox{\Hypertarget{classBeaconingClient_aec21f127bc8833cb6a33dd79e01a8514}\label{classBeaconingClient_aec21f127bc8833cb6a33dd79e01a8514}} 
+void {\bfseries broadcast\+Packets} ()
+\item 
+\mbox{\Hypertarget{classBeaconingClient_a361b4718d0351db19d689c9f46ba15d6}\label{classBeaconingClient_a361b4718d0351db19d689c9f46ba15d6}} 
+void {\bfseries receive\+Packets} ()
+\item 
+\mbox{\Hypertarget{classBeaconingClient_a67b27cb2951d703339b53300192cf4a1}\label{classBeaconingClient_a67b27cb2951d703339b53300192cf4a1}} 
+void {\bfseries process\+Packet} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t recv\+Len, const sockaddr\+\_\+in $\ast$client\+Addr, const \mbox{\hyperlink{structTimeStamp}{Time\+Stamp}} \&timestamp)
+\item 
+\mbox{\Hypertarget{classBeaconingClient_ab5b21907fb8af1da6c5eed014257c777}\label{classBeaconingClient_ab5b21907fb8af1da6c5eed014257c777}} 
+void {\bfseries write\+Results\+To\+File} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/dcp/beaconing\+Client.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,36 @@
+digraph g {
+	rankdir = LR;
+	
+	JSON [
+		shape = oval;
+	];
+	header [
+		shape = oval;
+	]
+	main [
+		label="main.py";
+		fontname="Courier";
+		shape = rect;
+	];
+	gen [
+		label="codeGenerator.py";
+		fontname="Courier";
+		shape = rect;
+	];
+	source [
+		label="output_source.cpp";
+		fontname="Courier";
+		shape = rect;
+	];
+	exec [
+		label="executable einary";
+		shape = oval;
+	];
+	
+	JSON -> main;
+	header -> main;
+	main -> gen;
+	gen -> source;
+	source -> exec;
+	
+}

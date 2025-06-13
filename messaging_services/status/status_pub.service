@@ -1,0 +1,15 @@
+[Unit]
+Description= Drone status updater and publisher
+After=network.target avahi-daemon.service
+
+[Service]
+ExecStart=/usr/bin/python3 /home/swarm_software/messaging_services/status/status_publisher.py
+Restart=always
+User=root
+Environment="PYTHONPATH=/home/swarm_software"
+WorkingDirectory=/home/swarm_software/messaging_services
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

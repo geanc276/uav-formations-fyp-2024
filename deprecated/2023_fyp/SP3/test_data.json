@@ -1,0 +1,65 @@
+{
+	"states": [
+		"STATE1",
+		"STATE2",
+		"STATE3"
+	],
+	"initialState": "STATE1",
+	"events": [
+		"EVENT1",
+		"EVENT2",
+		"EVENT3"
+	],
+	"variables": [
+		{
+			"type": "Counters_t",
+			"name": "testCount",
+			"initialValue": "{0, 0}"
+		}
+	],
+	"transitions": [
+		{
+			"fromState": "STATE1",
+			"toState": "STATE2",
+			"event": "EVENT1",
+			"actions": [
+				"testCount.transitionCounter++",
+				"printCounters(testCount)",
+				"cout << \"Transitioned to STATE2\\n\""
+			]
+		},
+		{
+			"fromState": "STATE2",
+			"toState": "STATE3",
+			"event": "EVENT2",
+			"actions": [
+				"testCount.transitionCounter++",
+				"printCounters(testCount)",
+				"cout << \"Transitioned to STATE3\\n\""
+			]
+		},
+		{
+			"fromState": "STATE3",
+			"toState": "STATE1",
+			"event": "EVENT3",
+			"guard": "testCount.cycleCounter < 3",
+			"actions": [
+				"testCount.transitionCounter++",
+				"testCount.cycleCounter++",
+				"printCounters(testCount)",
+				"cout << \"Transitioned to STATE1\\n\""
+			]
+		},
+		{
+			"fromState": "STATE3",
+			"toState": "STATE3",
+			"event": "EVENT3",
+			"guard": "testCount.cycleCounter >= 3",
+			"actions": [
+				"cout << \"Transitioned to STATE3\\n\"",
+				"printCounters(testCount)",
+				"cout << \"But all good things must come to an end\\n\""
+			]
+		}
+	]
+}

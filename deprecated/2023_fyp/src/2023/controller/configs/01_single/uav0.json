@@ -1,0 +1,27 @@
+{
+    "name": "uav0", 
+    "max_correction": 10, 
+    "other_drones": [],
+    "max_angular_correction": 1,
+    "local_initial": [1, 0, 5, 0], 
+    "leader": "uav0",
+    "constraints": [
+        {
+            "type": "fixed-local", 
+            "position": [0, 0], 
+            "distance": 0, 
+            "gains": [1, 0, 0.8]
+        },
+        {
+            "type": "altitude", 
+            "alt": 5, 
+            "gains1": [1, 0, 0],
+            "gains2": [2.4, 0.1, 0.2]
+        },
+        {
+            "type": "heading",
+            "heading": 0,
+            "gains": [1, 0, 0]
+        }
+    ]
+}

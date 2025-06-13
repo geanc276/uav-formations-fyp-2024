@@ -1,0 +1,104 @@
+{
+	"mission_name": "example_mission",
+	"event_generator_rate_hz": 10,
+	"states": [
+		{
+			"name": "wait_for_mission",
+			"position": "initial"
+		},
+		{
+			"name": "px4_auto_launch",
+			"position": "intermediate"
+		},
+		{
+			"name": "ctrl_init_formation",
+			"position": "intermediate"
+		},
+		{
+			"name": "ctrl_manoeuvre",
+			"position": "intermediate"
+		},
+		{
+			"name": "px4_hold_in_sky",
+			"position": "intermediate"
+		},
+		{
+			"name": "px4_return_to_base",
+			"position": "intermediate"
+		}
+	],
+	"events": [
+		{
+			"name": "launch",
+			"trigger": "self.user_input.get().data == 'LAUNCH' and self.wait_for_mission.is_active"
+		},
+		{
+			"name": "launch_done",
+			"trigger": "self.drone_state.get().mode == 'AUTO.LOITER' and self.px4_auto_launch.is_active"
+		},
+		{
+			"name": "formation_good",
+			"trigger": "self.user_input.get().data == 'FORMATION_GOOD' and self.ctrl_init_formation.is_active"
+		},
+		{
+			"name": "pause",
+			"trigger": "self.user_input.get().data == 'PAUSE' and self.ctrl_manoeuvre.is_active"
+		},
+		{
+			"name": "resume",
+			"trigger": "self.user_input.get().data == 'RESUME' and self.px4_hold_in_sky.is_active"
+		},
+		{
+			"name": "finish",
+			"trigger": "self.user_input.get().data == 'FINISH' and self.px4_hold_in_sky.is_active"
+		},
+		{
+			"name": "mission_completed",
+			"trigger": "self.px4_return_to_base.is_active and not self.drone_state.get().armed"
+		}
+	],
+	"transitions": [
+		{
+			"id": 0,
+			"origin": "wait_for_mission",
+			"destination": "px4_auto_launch",
+			"event": "launch"
+		},
+		{
+			"id": 1,
+			"origin": "px4_auto_launch",
+			"destination": "ctrl_init_formation",
+			"event": "launch_done"
+		},
+		{
+			"id": 2,
+			"origin": "ctrl_init_formation",
+			"destination": "ctrl_manoeuvre",
+			"event": "formation_good"
+		},
+		{
+			"id": 3,
+			"origin": "ctrl_manoeuvre",
+			"destination": "px4_hold_in_sky",
+			"event": "pause"
+		},
+		{
+			"id": 4,
+			"origin": "px4_hold_in_sky",
+			"destination": "ctrl_manoeuvre",
+			"event": "resume"
+		},
+		{
+			"id": 5,
+			"origin": "px4_hold_in_sky",
+			"destination": "px4_return_to_base",
+			"event": "finish"
+		},
+		{
+			"id": 6,
+			"origin": "px4_return_to_base",
+			"destination": "wait_for_mission",
+			"event": "mission_completed"
+		}
+	]
+}

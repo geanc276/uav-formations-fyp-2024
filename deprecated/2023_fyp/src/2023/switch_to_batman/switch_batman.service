@@ -1,0 +1,9 @@
+[Unit]
+Description=Switch to B.A.T.M.A.N-adv network.
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/bin/switch_batman.sh
+
+[Install]
+WantedBy=multi-user.target

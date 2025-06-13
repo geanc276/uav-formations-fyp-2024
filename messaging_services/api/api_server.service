@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn API Server for File Uploads & Executable Management
+After=network.target
+
+[Service]
+WorkingDirectory=/home/swarm_software/messaging_services/api
+Environment="PYTHONPATH=/home/swarm_software"
+ExecStart=/usr/bin/python3 -m gunicorn -w 2 -b 0.0.0.0:8001 api_server:app
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

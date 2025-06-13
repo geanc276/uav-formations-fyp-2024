@@ -1,0 +1,27 @@
+{
+    "name": "uav2",
+    "other_drones": ["uav1", "uav3", "uav4"],
+    "max_correction": 8, 
+    "max_angular_correction": 1,
+    "local_initial": [0, 0, 7], 
+    "leader": "uav2",
+    "constraints": [
+        {
+            "type": "fixed-local", 
+            "position": [0, 0], 
+            "distance": 0, 
+            "gains": [1, 0, 0]
+        },
+        {
+            "type": "altitude", 
+            "alt": 7, 
+            "gains1": [1, 0, 0],
+            "gains2": [2.4, 0.1, 0.2]
+        },
+        {
+            "type": "hold",
+            "gains": [1, 0, 0]
+        }
+
+    ]
+}

@@ -1,0 +1,7 @@
+# ~/logging_config.yaml
+rcutils_logging:
+  ros:
+    level: INFO
+    outputs: [file]
+    file_path: ~/ros2_launch.yaml.log
+    format: "[{severity}] [{name}]: {message}"

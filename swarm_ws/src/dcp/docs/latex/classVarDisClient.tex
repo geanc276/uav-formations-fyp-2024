@@ -1,0 +1,451 @@
+\hypertarget{classVarDisClient}{}\doxysection{Var\+Dis\+Client Class Reference}
+\label{classVarDisClient}\index{VarDisClient@{VarDisClient}}
+
+
+Collaboration diagram for Var\+Dis\+Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classVarDisClient__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVarDisClient_a159f039d93af8e6fa88597c51197b5d8}\label{classVarDisClient_a159f039d93af8e6fa88597c51197b5d8}} 
+\mbox{\hyperlink{classVarDisClient_a159f039d93af8e6fa88597c51197b5d8}{Var\+Dis\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classVarDisClient}{Var\+Dis\+Client}} instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVarDisClient_a84f9ea566782947db6ed9489c0e0ec71}{Var\+Dis\+Client}} (rclcpp\+::\+Publisher$<$ dcp\+\_\+msgs\+::msg\+::\+Register\+Protocol\+Request $>$\+::Shared\+Ptr, rclcpp\+::\+Publisher$<$ dcp\+\_\+msgs\+::msg\+::\+Transmit\+Payload\+Request $>$\+::Shared\+Ptr, rclcpp\+::\+Publisher$<$ dcp\+\_\+msgs\+::msg\+::\+Query\+Number\+Buffered\+Payloads\+Request $>$\+::Shared\+Ptr)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classVarDisClient}{Var\+Dis\+Client}} instance with specified publishers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} \& \mbox{\hyperlink{classVarDisClient_acaeaa962c6874b4898fb2743cb4ede4a}{get\+Database\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Simple getter for the database instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisClient_a8af454fe35869f41e4eb22984759f1de}{process\+Create\+IEElements}} (std\+::vector$<$ uint8\+\_\+t $>$ raw\+IEByte\+Vector)
+\begin{DoxyCompactList}\small\item\em Processes a vector of raw bytes representing a list of IETYPE-\/\+CREATE-\/\+VARIABLES elements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisClient_a0d18a7e7ce544c233fe7dc2b0f2335d4}{process\+Delete\+IEElements}} (std\+::vector$<$ uint8\+\_\+t $>$ raw\+IEByte\+Vector)
+\begin{DoxyCompactList}\small\item\em Processes a vector of raw bytes representing a list of IETYPE-\/\+DELETE-\/\+VARIABLES elements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisClient_a6e21e497b8ef981d107bb8dad8cc1336}{process\+Update\+IEElements}} (std\+::vector$<$ uint8\+\_\+t $>$ raw\+IEByte\+Vector)
+\begin{DoxyCompactList}\small\item\em Processes a vector of raw bytes representing a list of IETYPE-\/\+UPDATES elements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisClient_ac07df3bf92da61968ed5570b69cda1ad}{process\+Summary\+IEElements}} (std\+::vector$<$ uint8\+\_\+t $>$ raw\+IEByte\+Vector)
+\begin{DoxyCompactList}\small\item\em Processes a vector of raw bytes representing a list of IETYPE-\/\+SUMMARIES elements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisClient_ae1d555bd61b268dedc31af4be27df5e0}{process\+Request\+Var\+Upds\+IEElements}} (std\+::vector$<$ uint8\+\_\+t $>$ raw\+IEByte\+Vector)
+\begin{DoxyCompactList}\small\item\em Processes a vector of raw bytes representing a list of IETYPE-\/\+REQUEST-\/\+VARUPDATES elements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisClient_a85fe8df0197d227ba16b6227e398df98}{process\+Request\+Var\+Creates\+IEElements}} (std\+::vector$<$ uint8\+\_\+t $>$ raw\+IEByte\+Vector)
+\begin{DoxyCompactList}\small\item\em Processes a vector of raw bytes representing a list of IETYPE-\/\+REQUEST-\/\+VARCREATES elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structInformationElement}{Information\+Element}} \mbox{\hyperlink{classVarDisClient_acf3a186d0c2ce393a45d38782e1d29a1}{compose\+Summary\+IEElements}} (size\+\_\+t $\ast$current\+Payload\+Size)
+\begin{DoxyCompactList}\small\item\em Composes an \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing zero or more \mbox{\hyperlink{structVarSumm}{Var\+Summ}} objects for the Var\+Dis payload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structInformationElement}{Information\+Element}} \mbox{\hyperlink{classVarDisClient_ae70e38e3781ab0f2c9439a2d05bbdd67}{compose\+Create\+Variables\+IEElements}} (size\+\_\+t $\ast$current\+Payload\+Size)
+\begin{DoxyCompactList}\small\item\em Composes an \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing zero or more \mbox{\hyperlink{structVarCreate}{Var\+Create}} objects for the Var\+Dis payload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structInformationElement}{Information\+Element}} \mbox{\hyperlink{classVarDisClient_a979cea905726972aea8e5a140f7874e1}{compose\+Update\+IEElements}} (size\+\_\+t $\ast$current\+Payload\+Size)
+\begin{DoxyCompactList}\small\item\em Composes an \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing zero or more \mbox{\hyperlink{structVarUpd}{Var\+Upd}} objects for the Var\+Dis payload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structInformationElement}{Information\+Element}} \mbox{\hyperlink{classVarDisClient_a9606ef21b552464fd5a8a7d63d5e570e}{compose\+Delete\+Variables\+IEElements}} (size\+\_\+t $\ast$current\+Payload\+Size)
+\begin{DoxyCompactList}\small\item\em Composes an \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing zero or more Var\+Id objects for the Var\+Dis payload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structInformationElement}{Information\+Element}} \mbox{\hyperlink{classVarDisClient_a23c32d6447307b314a9919b5820dac8e}{compose\+Request\+Var\+Updates\+IEElements}} (size\+\_\+t $\ast$current\+Payload\+Size)
+\begin{DoxyCompactList}\small\item\em Composes an \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing zero or more \mbox{\hyperlink{structVarSumm}{Var\+Summ}} objects for the Var\+Dis payload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structInformationElement}{Information\+Element}} \mbox{\hyperlink{classVarDisClient_a96a4832225db4aac99045357e940824e}{compose\+Request\+Var\+Creates\+IEElements}} (size\+\_\+t $\ast$current\+Payload\+Size)
+\begin{DoxyCompactList}\small\item\em Composes an \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing zero or more Var\+Id objects for the Var\+Dis payload. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisClient_aa227f43effd1de4a965b3fb631bb3d0c}{register\+Client\+Protocol}} ()
+\begin{DoxyCompactList}\small\item\em Sends a registration message to the Beaconing Protocol. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVarDisClient_ad5ba62afc779b4a2c6d9312abb723033}\label{classVarDisClient_ad5ba62afc779b4a2c6d9312abb723033}} 
+void \mbox{\hyperlink{classVarDisClient_ad5ba62afc779b4a2c6d9312abb723033}{check\+Number\+Buffered\+Payloads}} ()
+\begin{DoxyCompactList}\small\item\em Checks the number of buffered Var\+Dis payloads in the Beaconing Protocol. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisClient_a0ea995b6d67ae3c80d9be185c024bae8}{query\+Buffer\+Response}} (const dcp\+\_\+msgs\+::msg\+::\+Query\+Number\+Buffered\+Payloads\+Response \&response)
+\begin{DoxyCompactList}\small\item\em Processes the response to a buffered payload query. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisClient_aa0f7a42ae68347b5f6b2c743a415c480}{receive\+\_\+payload\+\_\+callback\+\_\+indication}} (const dcp\+\_\+msgs\+::msg\+::\+Receive\+Payload\+Indication \&indic)
+\begin{DoxyCompactList}\small\item\em Handles the payload reception indication. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisClient_a2af40f5f732b12b11b2b28345d9d54b6}{transmitted\+\_\+payload\+\_\+callback\+\_\+indication}} (const dcp\+\_\+msgs\+::msg\+::\+Payload\+Transmitted\+Indication \&indic)
+\begin{DoxyCompactList}\small\item\em Handles the transmitted payload indication. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classVarDisClient_a1b04141c7dd57c283a59ce14b9372d28}{number\+Fitting\+Records}} (\mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} \&queue, const size\+\_\+t record\+Size, size\+\_\+t $\ast$current\+Payload\+Size)
+\begin{DoxyCompactList}\small\item\em Calculates the number of records that can fit in a Var\+Dis payload. \end{DoxyCompactList}\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{classVarDisClient_a40e99d4c3a798297d280a9b88ea3ba15}{generate\+Payload}} ()
+\begin{DoxyCompactList}\small\item\em Generates a payload for transmission. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisClient_a38bd92792ad91e3998a1e605a5091013}{generate\+Variable}} ()
+\begin{DoxyCompactList}\small\item\em Generates a new Var\+Dis variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisClient_a3eed639c1997858a3d870a73cb88516d}{update\+Variable}} ()
+\begin{DoxyCompactList}\small\item\em Updates an existing variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarDisClient_add427d1701539cf1562ceee42f0f693c}{delete\+Variable}} ()
+\begin{DoxyCompactList}\small\item\em Deletes an existing variable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVarDisClient_ad08f6094d139c2f8e089a980bcf1eaec}\label{classVarDisClient_ad08f6094d139c2f8e089a980bcf1eaec}} 
+void \mbox{\hyperlink{classVarDisClient_ad08f6094d139c2f8e089a980bcf1eaec}{write\+Results\+To\+File}} ()
+\begin{DoxyCompactList}\small\item\em Writes results to a file for analysis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVarDisClient_a20a79d4e1bf2fc6f7c5d516a6dbf0ca9}\label{classVarDisClient_a20a79d4e1bf2fc6f7c5d516a6dbf0ca9}} 
+\mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} \mbox{\hyperlink{classVarDisClient_a20a79d4e1bf2fc6f7c5d516a6dbf0ca9}{createQ}} = \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}}(\char`\"{}createQ\char`\"{})
+\begin{DoxyCompactList}\small\item\em A bunch of variables for the required custom queues. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVarDisClient_a3eaec39cf1874043884b2322a0e6c503}\label{classVarDisClient_a3eaec39cf1874043884b2322a0e6c503}} 
+\mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} {\bfseries deleteQ} = \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}}(\char`\"{}deleteQ\char`\"{})
+\item 
+\mbox{\Hypertarget{classVarDisClient_a3054c9d9686f306d5ff56076dcaae6bc}\label{classVarDisClient_a3054c9d9686f306d5ff56076dcaae6bc}} 
+\mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} {\bfseries updateQ} = \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}}(\char`\"{}updateQ\char`\"{})
+\item 
+\mbox{\Hypertarget{classVarDisClient_a64967d772ef46cdec9328f87bab9ddd0}\label{classVarDisClient_a64967d772ef46cdec9328f87bab9ddd0}} 
+\mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} {\bfseries summaryQ} = \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}}(\char`\"{}summaryQ\char`\"{})
+\item 
+\mbox{\Hypertarget{classVarDisClient_a402efdcb227c31e12e86dff4fdda8855}\label{classVarDisClient_a402efdcb227c31e12e86dff4fdda8855}} 
+\mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} {\bfseries req\+UpdQ} = \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}}(\char`\"{}req\+UpdQ\char`\"{})
+\item 
+\mbox{\Hypertarget{classVarDisClient_ac8aa8187d28f9f7ff4a7859e29adaa43}\label{classVarDisClient_ac8aa8187d28f9f7ff4a7859e29adaa43}} 
+\mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} {\bfseries req\+CreateQ} = \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}}(\char`\"{}req\+CreateQ\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVarDisClient_a84f9ea566782947db6ed9489c0e0ec71}\label{classVarDisClient_a84f9ea566782947db6ed9489c0e0ec71}} 
+\index{VarDisClient@{VarDisClient}!VarDisClient@{VarDisClient}}
+\index{VarDisClient@{VarDisClient}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{VarDisClient()}{VarDisClient()}}
+{\footnotesize\ttfamily Var\+Dis\+Client\+::\+Var\+Dis\+Client (\begin{DoxyParamCaption}\item[{rclcpp\+::\+Publisher$<$ dcp\+\_\+msgs\+::msg\+::\+Register\+Protocol\+Request $>$\+::Shared\+Ptr}]{,  }\item[{rclcpp\+::\+Publisher$<$ dcp\+\_\+msgs\+::msg\+::\+Transmit\+Payload\+Request $>$\+::Shared\+Ptr}]{,  }\item[{rclcpp\+::\+Publisher$<$ dcp\+\_\+msgs\+::msg\+::\+Query\+Number\+Buffered\+Payloads\+Request $>$\+::Shared\+Ptr}]{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classVarDisClient}{Var\+Dis\+Client}} instance with specified publishers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em register\+Protocol\+Publisher} & Publisher for sending register protocol requests. \\
+\hline
+{\em transmit\+Payload\+Publisher} & Publisher for sending transmit payload requests. \\
+\hline
+{\em query\+Number\+Buffered\+Payloads\+Publisher} & Publisher for sending query number buffered payload requests. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVarDisClient_ae70e38e3781ab0f2c9439a2d05bbdd67}\label{classVarDisClient_ae70e38e3781ab0f2c9439a2d05bbdd67}} 
+\index{VarDisClient@{VarDisClient}!composeCreateVariablesIEElements@{composeCreateVariablesIEElements}}
+\index{composeCreateVariablesIEElements@{composeCreateVariablesIEElements}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{composeCreateVariablesIEElements()}{composeCreateVariablesIEElements()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structInformationElement}{Information\+Element}} Var\+Dis\+Client\+::compose\+Create\+Variables\+IEElements (\begin{DoxyParamCaption}\item[{size\+\_\+t $\ast$}]{current\+Payload\+Size }\end{DoxyParamCaption})}
+
+
+
+Composes an \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing zero or more \mbox{\hyperlink{structVarCreate}{Var\+Create}} objects for the Var\+Dis payload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Payload\+Size} & Pointer to the size\+\_\+t variable tracking the current payload size. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing serialized \mbox{\hyperlink{structVarSumm}{Var\+Summ}} objects if successful; otherwise, an empty \mbox{\hyperlink{structInformationElement}{Information\+Element}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVarDisClient_a9606ef21b552464fd5a8a7d63d5e570e}\label{classVarDisClient_a9606ef21b552464fd5a8a7d63d5e570e}} 
+\index{VarDisClient@{VarDisClient}!composeDeleteVariablesIEElements@{composeDeleteVariablesIEElements}}
+\index{composeDeleteVariablesIEElements@{composeDeleteVariablesIEElements}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{composeDeleteVariablesIEElements()}{composeDeleteVariablesIEElements()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structInformationElement}{Information\+Element}} Var\+Dis\+Client\+::compose\+Delete\+Variables\+IEElements (\begin{DoxyParamCaption}\item[{size\+\_\+t $\ast$}]{current\+Payload\+Size }\end{DoxyParamCaption})}
+
+
+
+Composes an \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing zero or more Var\+Id objects for the Var\+Dis payload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Payload\+Size} & Pointer to the size\+\_\+t variable tracking the current payload size. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing serialized \mbox{\hyperlink{structVarSumm}{Var\+Summ}} objects if successful; otherwise, an empty \mbox{\hyperlink{structInformationElement}{Information\+Element}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVarDisClient_a96a4832225db4aac99045357e940824e}\label{classVarDisClient_a96a4832225db4aac99045357e940824e}} 
+\index{VarDisClient@{VarDisClient}!composeRequestVarCreatesIEElements@{composeRequestVarCreatesIEElements}}
+\index{composeRequestVarCreatesIEElements@{composeRequestVarCreatesIEElements}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{composeRequestVarCreatesIEElements()}{composeRequestVarCreatesIEElements()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structInformationElement}{Information\+Element}} Var\+Dis\+Client\+::compose\+Request\+Var\+Creates\+IEElements (\begin{DoxyParamCaption}\item[{size\+\_\+t $\ast$}]{current\+Payload\+Size }\end{DoxyParamCaption})}
+
+
+
+Composes an \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing zero or more Var\+Id objects for the Var\+Dis payload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Payload\+Size} & Pointer to the size\+\_\+t variable tracking the current payload size. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing serialized \mbox{\hyperlink{structVarSumm}{Var\+Summ}} objects if successful; otherwise, an empty \mbox{\hyperlink{structInformationElement}{Information\+Element}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVarDisClient_a23c32d6447307b314a9919b5820dac8e}\label{classVarDisClient_a23c32d6447307b314a9919b5820dac8e}} 
+\index{VarDisClient@{VarDisClient}!composeRequestVarUpdatesIEElements@{composeRequestVarUpdatesIEElements}}
+\index{composeRequestVarUpdatesIEElements@{composeRequestVarUpdatesIEElements}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{composeRequestVarUpdatesIEElements()}{composeRequestVarUpdatesIEElements()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structInformationElement}{Information\+Element}} Var\+Dis\+Client\+::compose\+Request\+Var\+Updates\+IEElements (\begin{DoxyParamCaption}\item[{size\+\_\+t $\ast$}]{current\+Payload\+Size }\end{DoxyParamCaption})}
+
+
+
+Composes an \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing zero or more \mbox{\hyperlink{structVarSumm}{Var\+Summ}} objects for the Var\+Dis payload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Payload\+Size} & Pointer to the size\+\_\+t variable tracking the current payload size. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing serialized \mbox{\hyperlink{structVarSumm}{Var\+Summ}} objects if successful; otherwise, an empty \mbox{\hyperlink{structInformationElement}{Information\+Element}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVarDisClient_acf3a186d0c2ce393a45d38782e1d29a1}\label{classVarDisClient_acf3a186d0c2ce393a45d38782e1d29a1}} 
+\index{VarDisClient@{VarDisClient}!composeSummaryIEElements@{composeSummaryIEElements}}
+\index{composeSummaryIEElements@{composeSummaryIEElements}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{composeSummaryIEElements()}{composeSummaryIEElements()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structInformationElement}{Information\+Element}} Var\+Dis\+Client\+::compose\+Summary\+IEElements (\begin{DoxyParamCaption}\item[{size\+\_\+t $\ast$}]{current\+Payload\+Size }\end{DoxyParamCaption})}
+
+
+
+Composes an \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing zero or more \mbox{\hyperlink{structVarSumm}{Var\+Summ}} objects for the Var\+Dis payload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Payload\+Size} & Pointer to the size\+\_\+t variable tracking the current payload size. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing serialized \mbox{\hyperlink{structVarSumm}{Var\+Summ}} objects if successful; otherwise, an empty \mbox{\hyperlink{structInformationElement}{Information\+Element}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVarDisClient_a979cea905726972aea8e5a140f7874e1}\label{classVarDisClient_a979cea905726972aea8e5a140f7874e1}} 
+\index{VarDisClient@{VarDisClient}!composeUpdateIEElements@{composeUpdateIEElements}}
+\index{composeUpdateIEElements@{composeUpdateIEElements}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{composeUpdateIEElements()}{composeUpdateIEElements()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structInformationElement}{Information\+Element}} Var\+Dis\+Client\+::compose\+Update\+IEElements (\begin{DoxyParamCaption}\item[{size\+\_\+t $\ast$}]{current\+Payload\+Size }\end{DoxyParamCaption})}
+
+
+
+Composes an \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing zero or more \mbox{\hyperlink{structVarUpd}{Var\+Upd}} objects for the Var\+Dis payload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Payload\+Size} & Pointer to the size\+\_\+t variable tracking the current payload size. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \mbox{\hyperlink{structInformationElement}{Information\+Element}} object containing serialized \mbox{\hyperlink{structVarSumm}{Var\+Summ}} objects if successful; otherwise, an empty \mbox{\hyperlink{structInformationElement}{Information\+Element}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVarDisClient_add427d1701539cf1562ceee42f0f693c}\label{classVarDisClient_add427d1701539cf1562ceee42f0f693c}} 
+\index{VarDisClient@{VarDisClient}!deleteVariable@{deleteVariable}}
+\index{deleteVariable@{deleteVariable}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{deleteVariable()}{deleteVariable()}}
+{\footnotesize\ttfamily void Var\+Dis\+Client\+::delete\+Variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deletes an existing variable. 
+
+Mainly used for testing \mbox{\Hypertarget{classVarDisClient_a40e99d4c3a798297d280a9b88ea3ba15}\label{classVarDisClient_a40e99d4c3a798297d280a9b88ea3ba15}} 
+\index{VarDisClient@{VarDisClient}!generatePayload@{generatePayload}}
+\index{generatePayload@{generatePayload}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{generatePayload()}{generatePayload()}}
+{\footnotesize\ttfamily std\+::vector$<$uint8\+\_\+t$>$ Var\+Dis\+Client\+::generate\+Payload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates a payload for transmission. 
+
+\begin{DoxyReturn}{Returns}
+A vector of bytes representing the generated payload. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVarDisClient_a38bd92792ad91e3998a1e605a5091013}\label{classVarDisClient_a38bd92792ad91e3998a1e605a5091013}} 
+\index{VarDisClient@{VarDisClient}!generateVariable@{generateVariable}}
+\index{generateVariable@{generateVariable}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{generateVariable()}{generateVariable()}}
+{\footnotesize\ttfamily void Var\+Dis\+Client\+::generate\+Variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates a new Var\+Dis variable. 
+
+Mainly used for testing \mbox{\Hypertarget{classVarDisClient_acaeaa962c6874b4898fb2743cb4ede4a}\label{classVarDisClient_acaeaa962c6874b4898fb2743cb4ede4a}} 
+\index{VarDisClient@{VarDisClient}!getDatabaseManager@{getDatabaseManager}}
+\index{getDatabaseManager@{getDatabaseManager}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{getDatabaseManager()}{getDatabaseManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}}\& Var\+Dis\+Client\+::get\+Database\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Simple getter for the database instance. 
+
+\begin{DoxyReturn}{Returns}
+The database instance currently in use 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVarDisClient_a1b04141c7dd57c283a59ce14b9372d28}\label{classVarDisClient_a1b04141c7dd57c283a59ce14b9372d28}} 
+\index{VarDisClient@{VarDisClient}!numberFittingRecords@{numberFittingRecords}}
+\index{numberFittingRecords@{numberFittingRecords}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{numberFittingRecords()}{numberFittingRecords()}}
+{\footnotesize\ttfamily uint8\+\_\+t Var\+Dis\+Client\+::number\+Fitting\+Records (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} \&}]{queue,  }\item[{const size\+\_\+t}]{record\+Size,  }\item[{size\+\_\+t $\ast$}]{current\+Payload\+Size }\end{DoxyParamCaption})}
+
+
+
+Calculates the number of records that can fit in a Var\+Dis payload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & The \mbox{\hyperlink{classVarDisQueue}{Var\+Dis\+Queue}} object to check for potential records. \\
+\hline
+{\em record\+Size} & The size of each record to be checked. \\
+\hline
+{\em current\+Payload\+Size} & A pointer to a size\+\_\+t variable to update with the current payload size. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of records that can be accommodated in the payload. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVarDisClient_a8af454fe35869f41e4eb22984759f1de}\label{classVarDisClient_a8af454fe35869f41e4eb22984759f1de}} 
+\index{VarDisClient@{VarDisClient}!processCreateIEElements@{processCreateIEElements}}
+\index{processCreateIEElements@{processCreateIEElements}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{processCreateIEElements()}{processCreateIEElements()}}
+{\footnotesize\ttfamily void Var\+Dis\+Client\+::process\+Create\+IEElements (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$}]{raw\+IEByte\+Vector }\end{DoxyParamCaption})}
+
+
+
+Processes a vector of raw bytes representing a list of IETYPE-\/\+CREATE-\/\+VARIABLES elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+IEByte\+Vector} & A vector of bytes representing the raw IE data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVarDisClient_a0d18a7e7ce544c233fe7dc2b0f2335d4}\label{classVarDisClient_a0d18a7e7ce544c233fe7dc2b0f2335d4}} 
+\index{VarDisClient@{VarDisClient}!processDeleteIEElements@{processDeleteIEElements}}
+\index{processDeleteIEElements@{processDeleteIEElements}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{processDeleteIEElements()}{processDeleteIEElements()}}
+{\footnotesize\ttfamily void Var\+Dis\+Client\+::process\+Delete\+IEElements (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$}]{raw\+IEByte\+Vector }\end{DoxyParamCaption})}
+
+
+
+Processes a vector of raw bytes representing a list of IETYPE-\/\+DELETE-\/\+VARIABLES elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+IEByte\+Vector} & A vector of bytes representing the raw IE data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVarDisClient_a85fe8df0197d227ba16b6227e398df98}\label{classVarDisClient_a85fe8df0197d227ba16b6227e398df98}} 
+\index{VarDisClient@{VarDisClient}!processRequestVarCreatesIEElements@{processRequestVarCreatesIEElements}}
+\index{processRequestVarCreatesIEElements@{processRequestVarCreatesIEElements}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{processRequestVarCreatesIEElements()}{processRequestVarCreatesIEElements()}}
+{\footnotesize\ttfamily void Var\+Dis\+Client\+::process\+Request\+Var\+Creates\+IEElements (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$}]{raw\+IEByte\+Vector }\end{DoxyParamCaption})}
+
+
+
+Processes a vector of raw bytes representing a list of IETYPE-\/\+REQUEST-\/\+VARCREATES elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+IEByte\+Vector} & A vector of bytes representing the raw IE data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVarDisClient_ae1d555bd61b268dedc31af4be27df5e0}\label{classVarDisClient_ae1d555bd61b268dedc31af4be27df5e0}} 
+\index{VarDisClient@{VarDisClient}!processRequestVarUpdsIEElements@{processRequestVarUpdsIEElements}}
+\index{processRequestVarUpdsIEElements@{processRequestVarUpdsIEElements}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{processRequestVarUpdsIEElements()}{processRequestVarUpdsIEElements()}}
+{\footnotesize\ttfamily void Var\+Dis\+Client\+::process\+Request\+Var\+Upds\+IEElements (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$}]{raw\+IEByte\+Vector }\end{DoxyParamCaption})}
+
+
+
+Processes a vector of raw bytes representing a list of IETYPE-\/\+REQUEST-\/\+VARUPDATES elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+IEByte\+Vector} & A vector of bytes representing the raw IE data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVarDisClient_ac07df3bf92da61968ed5570b69cda1ad}\label{classVarDisClient_ac07df3bf92da61968ed5570b69cda1ad}} 
+\index{VarDisClient@{VarDisClient}!processSummaryIEElements@{processSummaryIEElements}}
+\index{processSummaryIEElements@{processSummaryIEElements}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{processSummaryIEElements()}{processSummaryIEElements()}}
+{\footnotesize\ttfamily void Var\+Dis\+Client\+::process\+Summary\+IEElements (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$}]{raw\+IEByte\+Vector }\end{DoxyParamCaption})}
+
+
+
+Processes a vector of raw bytes representing a list of IETYPE-\/\+SUMMARIES elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+IEByte\+Vector} & A vector of bytes representing the raw IE data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVarDisClient_a6e21e497b8ef981d107bb8dad8cc1336}\label{classVarDisClient_a6e21e497b8ef981d107bb8dad8cc1336}} 
+\index{VarDisClient@{VarDisClient}!processUpdateIEElements@{processUpdateIEElements}}
+\index{processUpdateIEElements@{processUpdateIEElements}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{processUpdateIEElements()}{processUpdateIEElements()}}
+{\footnotesize\ttfamily void Var\+Dis\+Client\+::process\+Update\+IEElements (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$}]{raw\+IEByte\+Vector }\end{DoxyParamCaption})}
+
+
+
+Processes a vector of raw bytes representing a list of IETYPE-\/\+UPDATES elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+IEByte\+Vector} & A vector of bytes representing the raw IE data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVarDisClient_a0ea995b6d67ae3c80d9be185c024bae8}\label{classVarDisClient_a0ea995b6d67ae3c80d9be185c024bae8}} 
+\index{VarDisClient@{VarDisClient}!queryBufferResponse@{queryBufferResponse}}
+\index{queryBufferResponse@{queryBufferResponse}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{queryBufferResponse()}{queryBufferResponse()}}
+{\footnotesize\ttfamily void Var\+Dis\+Client\+::query\+Buffer\+Response (\begin{DoxyParamCaption}\item[{const dcp\+\_\+msgs\+::msg\+::\+Query\+Number\+Buffered\+Payloads\+Response \&}]{response }\end{DoxyParamCaption})}
+
+
+
+Processes the response to a buffered payload query. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & The response message containing the number of buffered payloads. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVarDisClient_aa0f7a42ae68347b5f6b2c743a415c480}\label{classVarDisClient_aa0f7a42ae68347b5f6b2c743a415c480}} 
+\index{VarDisClient@{VarDisClient}!receive\_payload\_callback\_indication@{receive\_payload\_callback\_indication}}
+\index{receive\_payload\_callback\_indication@{receive\_payload\_callback\_indication}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{receive\_payload\_callback\_indication()}{receive\_payload\_callback\_indication()}}
+{\footnotesize\ttfamily void Var\+Dis\+Client\+::receive\+\_\+payload\+\_\+callback\+\_\+indication (\begin{DoxyParamCaption}\item[{const dcp\+\_\+msgs\+::msg\+::\+Receive\+Payload\+Indication \&}]{indic }\end{DoxyParamCaption})}
+
+
+
+Handles the payload reception indication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indic} & The indication message received for a payload. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVarDisClient_aa227f43effd1de4a965b3fb631bb3d0c}\label{classVarDisClient_aa227f43effd1de4a965b3fb631bb3d0c}} 
+\index{VarDisClient@{VarDisClient}!registerClientProtocol@{registerClientProtocol}}
+\index{registerClientProtocol@{registerClientProtocol}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{registerClientProtocol()}{registerClientProtocol()}}
+{\footnotesize\ttfamily void Var\+Dis\+Client\+::register\+Client\+Protocol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sends a registration message to the Beaconing Protocol. 
+
+This method is called during the initialization phase of the Beaconing Protocol to ensure that the client registers itself properly with the protocol. \mbox{\Hypertarget{classVarDisClient_a2af40f5f732b12b11b2b28345d9d54b6}\label{classVarDisClient_a2af40f5f732b12b11b2b28345d9d54b6}} 
+\index{VarDisClient@{VarDisClient}!transmitted\_payload\_callback\_indication@{transmitted\_payload\_callback\_indication}}
+\index{transmitted\_payload\_callback\_indication@{transmitted\_payload\_callback\_indication}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{transmitted\_payload\_callback\_indication()}{transmitted\_payload\_callback\_indication()}}
+{\footnotesize\ttfamily void Var\+Dis\+Client\+::transmitted\+\_\+payload\+\_\+callback\+\_\+indication (\begin{DoxyParamCaption}\item[{const dcp\+\_\+msgs\+::msg\+::\+Payload\+Transmitted\+Indication \&}]{indic }\end{DoxyParamCaption})}
+
+
+
+Handles the transmitted payload indication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indic} & The indication message received for transmitted payloads. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVarDisClient_a3eed639c1997858a3d870a73cb88516d}\label{classVarDisClient_a3eed639c1997858a3d870a73cb88516d}} 
+\index{VarDisClient@{VarDisClient}!updateVariable@{updateVariable}}
+\index{updateVariable@{updateVariable}!VarDisClient@{VarDisClient}}
+\doxysubsubsection{\texorpdfstring{updateVariable()}{updateVariable()}}
+{\footnotesize\ttfamily void Var\+Dis\+Client\+::update\+Variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates an existing variable. 
+
+Mainly used for testing 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/dcp/Var\+Dis\+Client.\+h\end{DoxyCompactItemize}

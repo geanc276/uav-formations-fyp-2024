@@ -1,0 +1,19 @@
+<library path="lib/libdcp">
+  <class name="dcp/BeaconingClientNode" type="dcp::BeaconingClientNode" base_class_type="nodelet::Nodelet">
+  <description>
+  This is the Beaconing client node.
+  </description>
+  </class>
+
+  <class name="dcp/SRPClientNode" type="dcp::SRPClientNode" base_class_type="nodelet::Nodelet">
+  <description>
+  This is the SRP client node.
+  </description>
+  </class>
+
+  <class name="dcp/VarDisClientNode" type="dcp::VarDisClientNode" base_class_type="nodelet::Nodelet">
+    <description>
+      This is the VarDis client node.
+    </description>
+  </class>
+</library>

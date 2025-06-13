@@ -1,0 +1,15 @@
+stages:
+    - build
+
+build-ci-branch:
+    stage: build
+    script:
+        - docker buildx inspect customBuilder || docker buildx create --name customBuilder --bootstrap --use
+        - docker buildx build --load --progress=plain --platform linux/arm64/v8 -t $CI_REGISTRY/$CI_COMMIT_REF_NAME .
+        - docker login -u $CI_DEPLOY_USER -p $CI_DEPLOY_PASSWORD $CI_REGISTRY
+        - docker push $CI_REGISTRY/$CI_COMMIT_REF_NAME
+
+    only:
+        - management-interface
+        - demo
+        - web-server

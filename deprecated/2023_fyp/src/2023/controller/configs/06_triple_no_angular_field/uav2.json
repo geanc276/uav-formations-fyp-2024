@@ -1,0 +1,30 @@
+{
+    "name": "uav2",
+    "other_drones": ["uav3", "uav1"],
+    "max_correction": 8, 
+    "max_angular_correction": 1,
+    "local_initial": [0, 0, 7], 
+    "leader": "uav3",
+    "constraints": [
+        {
+            "type": "distance", 
+            "other": "uav3",
+            "distance": 5.5,
+            "gains1": [0.6, 0, 0],
+            "gains2": [2.5, 0, 0]
+        },
+        {
+            "type": "distance", 
+            "other": "uav1",
+            "distance": 4.65,
+            "gains1": [0.6, 0, 0],
+            "gains2": [2.5, 0, 0]
+        },
+        {
+            "type": "altitude", 
+            "alt": 7, 
+            "gains1": [1, 0, 0],
+            "gains2": [2.4, 0.1, 0.2]
+        }
+    ]
+}

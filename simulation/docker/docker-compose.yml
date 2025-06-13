@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  drone:
+    image: drone:humble
+    container_name: "${CONTAINER_NAME_PREFIX:-drone}_container"
+    stdin_open: true
+    tty: true
+    volumes:
+      - type: bind
+        source: ${HOST_WS_PATH:-../../}
+        target: /home/ros/drones/uav-formations-fyp-2024
+    environment:
+      - DISPLAY=${DISPLAY}
+      - DRONE_ID=${DRONE_ID:-1}
+      - DRONE_CONFIG_FOLDER_PATH="/home/ros/drones/uav-formations-fyp-2024/simulation/configs/drone_${DRONE_ID:-1}"
+      - DRONE_STATE_FOLDER_PATH=/home/ros/drones/uav-formations-fyp-2024/simulation/config_states
+    network_mode: "bridge" # To enable GUI/X11
+    privileged: true # If the container needs elevated permissions for certain devices
+    command: bash # Start an interactive shell
+
+  # micro_xrce_dds:
+  #   image: eprosima/micro-xrce-dds-agent:latest
+  #   container_name: micro_xrce_dds_agent
+  #   stdin_open: true
+  #   tty: true
+  #   network_mode: "host"
+  #   command: >
+  #     /bin/bash -c "MicroXRCEAgent udp4 -p 8888"

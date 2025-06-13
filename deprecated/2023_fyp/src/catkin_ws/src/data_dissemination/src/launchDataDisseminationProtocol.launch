@@ -1,0 +1,9 @@
+<launch>
+  <node pkg="nodelet" type="nodelet" name="nodelet_manager"  args="manager" output="screen"/>
+
+  <node pkg="nodelet" required="true" type="nodelet" name="BeaconingClientNodelet" args="load data_dissemination/BeaconingClientNodelet nodelet_manager" output="screen">
+  </node>
+
+  <node pkg="nodelet" required="true" type="nodelet" name="SRPClientNodelet" args="load data_dissemination/SRPClientNodelet nodelet_manager" output="screen">
+  </node>
+</launch>

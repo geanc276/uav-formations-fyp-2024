@@ -1,0 +1,13 @@
+digraph G {
+	fontname="Helvetica,Arial,sans-serif";
+	node [fontname="Helvetica,Arial,sans-serif"];
+	edge [fontname="Courier"];
+	rankdir=LR;
+	node [shape = doublecircle]; NODE1 NODE2 NODE3;
+	node [shape = circle]
+	
+	NODE1 -> 1 -> NODE2;
+	NODE2 -> 2 -> NODE3;
+	NODE3 -> 3 -> NODE1;
+	NODE3 -> 4 -> NODE3;
+}

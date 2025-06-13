@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>logging</name>
+  <version>0.0.1</version>
+  <description>Logging utilities for UAV formations.</description>
+  <maintainer email="your.email@example.com">Your Name</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- No additional build or exec dependencies needed for a static library -->
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

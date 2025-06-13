@@ -1,0 +1,12 @@
+<launch>
+  <!--  args is used to disable logging for clearer demo output-->
+  <!--  You can remove it like the other two nodes to log as normal-->
+  <node pkg="dcp" exec="beaconing_client_node" name="beaconing_client_node" output="screen" args="--ros-args --log-level FATAL">
+  </node>
+
+<!--  <node pkg="dcp" exec="srp_client_node" name="srp_client_node" output="screen">-->
+<!--  </node>-->
+
+  <node pkg="dcp" exec="vardis_client_node" name="vardis_client_node" output="screen">
+  </node>
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws/devel
+
+Name: networking
+Description: Description of networking
+Version: 0.0.0
+Cflags: -I/home/ubuntu/catkin_ws/src/networking/include
+Libs: -L${prefix}/lib -lnetworking
+Requires: roscpp std_msgs message_runtime

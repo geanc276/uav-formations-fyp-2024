@@ -1,0 +1,65 @@
+[
+  {
+    "state": "configure",
+    "off_board": false,
+    "valid": ["start"],
+    "onEnter": "enter_configure",
+    "onExit": "exit_configure"
+  },
+  {
+    "begin": false,
+    "state": "start",
+    "off_board": false,
+    "valid": ["takeoff", "pause", "px4_hold"],
+    "onEnter": "enter_start",
+    "onExit": "exit_start"
+  },
+  {
+    "state": "takeoff",
+    "off_board": false,
+    "valid": ["rendezvous", "pause", "px4_hold"],
+    "onEnter": "enter_takeoff",
+    "onExit": "exit_takeoff"
+  },
+  {
+    "state": "rendezvous",
+    "off_board": true,
+    "valid": ["pause", "move", "px4_hold", "return", "land"],
+    "onEnter": "enter_rendezvous",
+    "onExit": "exit_rendezvous"
+  },
+  {
+    "state": "pause",
+    "off_board": true,
+    "valid": ["move", "px4_hold", "return", "land"],
+    "onEnter": "enter_hold",
+    "onExit": "exit_hold"
+  },
+  {
+    "state": "move",
+    "off_board": true,
+    "valid": ["pause", "px4_hold", "land"],
+    "onEnter": "enter_move",
+    "onExit": "exit_move"
+  },
+  {
+    "state": "px4_hold",
+    "off_board": true,
+    "valid": ["move", "return", "land"],
+    "onEnter": "enter_px4_hold",
+    "onExit": "exit_px4_hold"
+  },
+  {
+    "state": "return",
+    "off_board": false,
+    "valid": ["start", "land", "px4_hold", "move"],
+    "onEnter": "enter_return",
+    "onExit": "exit_return"
+  },
+  {
+    "state": "land",
+    "valid": ["start"],
+    "onEnter": "enter_land",
+    "onExit": "exit_land"
+  }
+]

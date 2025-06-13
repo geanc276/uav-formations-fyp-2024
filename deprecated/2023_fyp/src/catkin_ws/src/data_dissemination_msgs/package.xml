@@ -1,0 +1,16 @@
+<package>
+  <name>data_dissemination_msgs</name>
+  <version>0.5.13</version>
+  <description>
+    Standard ROS Messages including common message types representing primitive data types and other basic message constructs, such as multiarrays.
+    For common, generic robot-specific message types, please see <a href="http://www.ros.org/wiki/common_msgs">common_msgs</a>.
+  </description>
+  <maintainer email="emo58@uclive.ac.nz">Euan Morgan</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>message_generation</build_depend>
+
+  <run_depend>message_runtime</run_depend>
+</package>

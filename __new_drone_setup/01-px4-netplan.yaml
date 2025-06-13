@@ -1,0 +1,12 @@
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+    eth0:
+      addresses:
+        - 10.41.10.1/24
+      nameservers:
+        addresses: [10.41.10.1]
+      routes:
+        - to: 10.41.10.1
+          via: 10.41.10.1
