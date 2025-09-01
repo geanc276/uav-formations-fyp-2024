@@ -1,0 +1,7 @@
+<map id="SharedNeighbourTableEntry" name="SharedNeighbourTableEntry">
+<area shape="rect" id="node1" title=" " alt="" coords="185,95,387,121"/>
+<area shape="rect" id="node2" href="$structDroneName.html" title=" " alt="" coords="5,5,105,32"/>
+<area shape="rect" id="node3" href="$structSRPSequenceNumber.html" title=" " alt="" coords="130,5,293,32"/>
+<area shape="rect" id="node4" href="$structTimeStamp.html" title=" " alt="" coords="317,5,415,32"/>
+<area shape="rect" id="node5" href="$structSafetyData.html" title=" " alt="" coords="443,5,537,32"/>
+</map>

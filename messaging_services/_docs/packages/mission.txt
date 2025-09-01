@@ -1,0 +1,1 @@
+- python package that forwards ros messages from the ros2 swarm_ws -- meant to  be live update of mission status but currently doesnt work, should be replaces ultimately by VARDIS

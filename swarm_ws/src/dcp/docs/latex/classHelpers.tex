@@ -1,0 +1,641 @@
+\hypertarget{classHelpers}{}\doxysection{Helpers Class Reference}
+\label{classHelpers}\index{Helpers@{Helpers}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHelpers_a121d09f405aec611edd49ab9ef777af2}\label{classHelpers_a121d09f405aec611edd49ab9ef777af2}} 
+\mbox{\hyperlink{classHelpers_a121d09f405aec611edd49ab9ef777af2}{Helpers}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classHelpers}{Helpers}} object. \end{DoxyCompactList}\item 
+Node\+Identifier \mbox{\hyperlink{classHelpers_ae4df790489b49e70bb3605a36b449cc6}{get\+Node\+Identifier}} ()
+\begin{DoxyCompactList}\small\item\em Gets the MAC address of the current NIC. Used as a unique identifier. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classHelpers_ae6034de31a71a7606b41153b835523b5}{serialize\+Int}} (std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, T value)
+\begin{DoxyCompactList}\small\item\em Serializes an integer value into a byte buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelpers_ac9eab9b969d116e0a9b3740f4574fa71}{serialize\+String}} (std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Serializes a string into a byte buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelpers_a0f841e7646d19513081df284b65280a6}{serialize\+Bytes}} (std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, const std\+::vector$<$ uint8\+\_\+t $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Serializes a byte vector into a byte buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelpers_ab1e93f256cfe10df4bc5a65f6b4b0960}{serialize\+Var\+Spec}} (std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, const \mbox{\hyperlink{structVarSpec}{Var\+Spec}} \&spec)
+\begin{DoxyCompactList}\small\item\em Serializes a \mbox{\hyperlink{structVarSpec}{Var\+Spec}} object into a byte buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelpers_add7e82bafca7c9e37912cadebdd7da06}{serialize\+Var\+Upd}} (std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, const \mbox{\hyperlink{structVarUpd}{Var\+Upd}} \&upd)
+\begin{DoxyCompactList}\small\item\em Serializes a \mbox{\hyperlink{structVarUpd}{Var\+Upd}} object into a byte buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelpers_aba8b017afe0864b798557267c6b55f22}{serialize\+Var\+Create}} (std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, const \mbox{\hyperlink{structVarCreate}{Var\+Create}} \&var\+Create)
+\begin{DoxyCompactList}\small\item\em Serializes a \mbox{\hyperlink{structVarCreate}{Var\+Create}} object into a byte buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelpers_a557055c3c0962d13bb99bf1d0d74c098}{serialize\+Var\+Summ}} (std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, const \mbox{\hyperlink{structVarSumm}{Var\+Summ}} \&var\+Summ)
+\begin{DoxyCompactList}\small\item\em Serializes a \mbox{\hyperlink{structVarSumm}{Var\+Summ}} object into a byte buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelpers_aa1a7be12d685531b3eab7df1956948d7}{serialize\+Safety\+Data}} (std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, const \mbox{\hyperlink{structSafetyData}{Safety\+Data}} \&safety\+Data)
+\begin{DoxyCompactList}\small\item\em Serializes a \mbox{\hyperlink{structSafetyData}{Safety\+Data}} object into a byte buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelpers_adf111219d36645c6da70d57415711ce1}{serialize\+Extended\+Safety\+Data}} (std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, const \mbox{\hyperlink{structExtendedSafetyData}{Extended\+Safety\+Data}} \&extened\+Safety\+Data)
+\begin{DoxyCompactList}\small\item\em Serializes an \mbox{\hyperlink{structExtendedSafetyData}{Extended\+Safety\+Data}} object into a byte buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelpers_a9c5b3dc58df252790399500b2fdaffe5}{serialize\+Information\+Element}} (std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, const \mbox{\hyperlink{structInformationElement}{Information\+Element}} \&information\+Element)
+\begin{DoxyCompactList}\small\item\em Serializes an \mbox{\hyperlink{structInformationElement}{Information\+Element}} object into a byte buffer. \end{DoxyCompactList}\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{classHelpers_af1763811c52943f3f3a4f14635c2ab98}{serialize\+Var\+Create\+List}} (const std\+::vector$<$ \mbox{\hyperlink{structVarCreate}{Var\+Create}} $>$ \&var\+Create\+List)
+\begin{DoxyCompactList}\small\item\em Serializes a list of \mbox{\hyperlink{structVarCreate}{Var\+Create}} objects into a byte buffer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classHelpers_abda4fc83d49db46c8cb8c66f43f1a5e8}{deserialize\+Int}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, size\+\_\+t \&offset)
+\begin{DoxyCompactList}\small\item\em Deserializes an integer value from a byte buffer. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classHelpers_a41cc09568f0d3c32477b50d944880534}{deserialize\+String}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, size\+\_\+t \&offset)
+\begin{DoxyCompactList}\small\item\em Deserializes a string from a byte buffer. \end{DoxyCompactList}\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{classHelpers_a76f611acabc9a472f5374a2e31a42864}{deserialize\+Bytes}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, size\+\_\+t \&offset)
+\begin{DoxyCompactList}\small\item\em Deserializes a byte vector from a byte buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structVarSpec}{Var\+Spec}} \mbox{\hyperlink{classHelpers_a703d4fe16bea33e7a611bce11bcd6606}{deserialize\+Var\+Spec}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, size\+\_\+t \&offset)
+\begin{DoxyCompactList}\small\item\em Deserializes a \mbox{\hyperlink{structVarSpec}{Var\+Spec}} object from a byte buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structVarUpd}{Var\+Upd}} \mbox{\hyperlink{classHelpers_a0fa48027ebd09c5f1c2f004fcf354aae}{deserialize\+Var\+Upd}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, size\+\_\+t \&offset)
+\begin{DoxyCompactList}\small\item\em Deserializes a \mbox{\hyperlink{structVarUpd}{Var\+Upd}} object from a byte buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structVarCreate}{Var\+Create}} \mbox{\hyperlink{classHelpers_a1fe292fee2649c79dc6b43ebf00f2d33}{deserialize\+Var\+Create}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, size\+\_\+t \&offset)
+\begin{DoxyCompactList}\small\item\em Deserializes a \mbox{\hyperlink{structVarCreate}{Var\+Create}} object from a byte buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structVarSumm}{Var\+Summ}} \mbox{\hyperlink{classHelpers_adad49739fbeb0abd84442bc556729061}{deserialize\+Var\+Summ}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, size\+\_\+t \&offset)
+\begin{DoxyCompactList}\small\item\em Deserializes a \mbox{\hyperlink{structVarSumm}{Var\+Summ}} object from a byte buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSafetyData}{Safety\+Data}} \mbox{\hyperlink{classHelpers_ad6a93293a4aa94be3e2329cba627e220}{deserialize\+Safety\+Data}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, size\+\_\+t \&offset)
+\begin{DoxyCompactList}\small\item\em Deserializes a \mbox{\hyperlink{structSafetyData}{Safety\+Data}} object from a byte buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structExtendedSafetyData}{Extended\+Safety\+Data}} \mbox{\hyperlink{classHelpers_aa87471b3a31b84f9769ad4f91319f5f9}{deserialize\+Extended\+Safety\+Data}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, size\+\_\+t \&offset)
+\begin{DoxyCompactList}\small\item\em Deserializes an \mbox{\hyperlink{structExtendedSafetyData}{Extended\+Safety\+Data}} object from a byte buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structInformationElement}{Information\+Element}} \mbox{\hyperlink{classHelpers_a805cefbb5f0f4c028f508c5df35628d2}{deserialize\+Information\+Element}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buffer, size\+\_\+t \&offset)
+\begin{DoxyCompactList}\small\item\em Deserializes an \mbox{\hyperlink{structInformationElement}{Information\+Element}} object from a byte buffer. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structVarCreate}{Var\+Create}} $>$ \mbox{\hyperlink{classHelpers_a0368611976c1c42c03a8148badf66987}{deserialize\+Var\+Create\+List}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buffer)
+\begin{DoxyCompactList}\small\item\em Deserializes a list of \mbox{\hyperlink{structVarCreate}{Var\+Create}} objects from a byte buffer. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structVarUpd}{Var\+Upd}} $>$ \mbox{\hyperlink{classHelpers_a95455a4410138e11e53a064e919ebbd8}{deserialize\+Var\+Upd\+List}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buffer)
+\begin{DoxyCompactList}\small\item\em Deserializes a vector of \mbox{\hyperlink{structVarUpd}{Var\+Upd}} variables from a byte buffer. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structVarSumm}{Var\+Summ}} $>$ \mbox{\hyperlink{classHelpers_a494873bd54fbff3f0f2b12c4d8dfd12f}{deserialize\+Var\+Summ\+List}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buffer)
+\begin{DoxyCompactList}\small\item\em Deserializes a vector of \mbox{\hyperlink{structVarSumm}{Var\+Summ}} variables from a byte buffer. \end{DoxyCompactList}\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{classHelpers_a2bd9fbe56c6a9b4ad8e5eb7f28b22e6a}{deserialize\+Var\+Id\+List}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&buffer)
+\begin{DoxyCompactList}\small\item\em Deserializes a vector of Var\+Id (uint8\+\_\+t) variables from a byte buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelpers_a952734ceae917f185548a41e98c4d9e1}{add\+Var\+Summ\+To\+IEElement}} (\mbox{\hyperlink{structInformationElement}{Information\+Element}} $\ast$information\+Element, \mbox{\hyperlink{structDBEntry}{DBEntry}} $\ast$db\+Entry, size\+\_\+t $\ast$current\+Payload\+Size)
+\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{structVarSumm}{Var\+Summ}} object to the Information Element (IE) Ie\+List. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelpers_a14e73ba711411bae5a1b9ac6c68ff70f}{add\+Var\+Create\+To\+IEElement}} (\mbox{\hyperlink{structInformationElement}{Information\+Element}} $\ast$information\+Element, \mbox{\hyperlink{structDBEntry}{DBEntry}} $\ast$db\+Entry, size\+\_\+t $\ast$current\+Payload\+Size)
+\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{structVarCreate}{Var\+Create}} object to the Information Element (IE) Ie\+List. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelpers_ab352c6c17de0d97488e487299dd84b3a}{add\+Var\+Update\+To\+IEElement}} (\mbox{\hyperlink{structInformationElement}{Information\+Element}} $\ast$information\+Element, \mbox{\hyperlink{structDBEntry}{DBEntry}} $\ast$db\+Entry, size\+\_\+t $\ast$current\+Payload\+Size)
+\begin{DoxyCompactList}\small\item\em Adds a Var\+Update object to the Information Element (IE) Ie\+List. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelpers_a75f50ed5505eba30fe695567d1883e7a}{add\+Var\+Id\+To\+IEElement}} (\mbox{\hyperlink{structInformationElement}{Information\+Element}} $\ast$information\+Element, \mbox{\hyperlink{structDBEntry}{DBEntry}} $\ast$db\+Entry, size\+\_\+t $\ast$current\+Payload\+Size)
+\begin{DoxyCompactList}\small\item\em Adds a Var\+Id object to the Information Element (IE) Ie\+List. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHelpers_a14e73ba711411bae5a1b9ac6c68ff70f}\label{classHelpers_a14e73ba711411bae5a1b9ac6c68ff70f}} 
+\index{Helpers@{Helpers}!addVarCreateToIEElement@{addVarCreateToIEElement}}
+\index{addVarCreateToIEElement@{addVarCreateToIEElement}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{addVarCreateToIEElement()}{addVarCreateToIEElement()}}
+{\footnotesize\ttfamily void Helpers\+::add\+Var\+Create\+To\+IEElement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structInformationElement}{Information\+Element}} $\ast$}]{information\+Element,  }\item[{\mbox{\hyperlink{structDBEntry}{DBEntry}} $\ast$}]{db\+Entry,  }\item[{size\+\_\+t $\ast$}]{current\+Payload\+Size }\end{DoxyParamCaption})}
+
+
+
+Adds a \mbox{\hyperlink{structVarCreate}{Var\+Create}} object to the Information Element (IE) Ie\+List. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em information\+Element} & Pointer to the \mbox{\hyperlink{structInformationElement}{Information\+Element}} object \\
+\hline
+{\em db\+Entry} & Pointer to the \mbox{\hyperlink{structDBEntry}{DBEntry}} object containing data to create the \mbox{\hyperlink{structVarCreate}{Var\+Create}} object. \\
+\hline
+{\em current\+Payload\+Size} & Pointer to the size\+\_\+t variable tracking the current payload size. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHelpers_a75f50ed5505eba30fe695567d1883e7a}\label{classHelpers_a75f50ed5505eba30fe695567d1883e7a}} 
+\index{Helpers@{Helpers}!addVarIdToIEElement@{addVarIdToIEElement}}
+\index{addVarIdToIEElement@{addVarIdToIEElement}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{addVarIdToIEElement()}{addVarIdToIEElement()}}
+{\footnotesize\ttfamily void Helpers\+::add\+Var\+Id\+To\+IEElement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structInformationElement}{Information\+Element}} $\ast$}]{information\+Element,  }\item[{\mbox{\hyperlink{structDBEntry}{DBEntry}} $\ast$}]{db\+Entry,  }\item[{size\+\_\+t $\ast$}]{current\+Payload\+Size }\end{DoxyParamCaption})}
+
+
+
+Adds a Var\+Id object to the Information Element (IE) Ie\+List. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em information\+Element} & Pointer to the \mbox{\hyperlink{structInformationElement}{Information\+Element}} object \\
+\hline
+{\em db\+Entry} & Pointer to the \mbox{\hyperlink{structDBEntry}{DBEntry}} object containing data to create the Var\+Id object. \\
+\hline
+{\em current\+Payload\+Size} & Pointer to the size\+\_\+t variable tracking the current payload size. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHelpers_a952734ceae917f185548a41e98c4d9e1}\label{classHelpers_a952734ceae917f185548a41e98c4d9e1}} 
+\index{Helpers@{Helpers}!addVarSummToIEElement@{addVarSummToIEElement}}
+\index{addVarSummToIEElement@{addVarSummToIEElement}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{addVarSummToIEElement()}{addVarSummToIEElement()}}
+{\footnotesize\ttfamily void Helpers\+::add\+Var\+Summ\+To\+IEElement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structInformationElement}{Information\+Element}} $\ast$}]{information\+Element,  }\item[{\mbox{\hyperlink{structDBEntry}{DBEntry}} $\ast$}]{db\+Entry,  }\item[{size\+\_\+t $\ast$}]{current\+Payload\+Size }\end{DoxyParamCaption})}
+
+
+
+Adds a \mbox{\hyperlink{structVarSumm}{Var\+Summ}} object to the Information Element (IE) Ie\+List. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em information\+Element} & Pointer to the \mbox{\hyperlink{structInformationElement}{Information\+Element}} object \\
+\hline
+{\em db\+Entry} & Pointer to the \mbox{\hyperlink{structDBEntry}{DBEntry}} object containing data to create the \mbox{\hyperlink{structVarSumm}{Var\+Summ}} object. \\
+\hline
+{\em current\+Payload\+Size} & Pointer to the size\+\_\+t variable tracking the current payload size. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHelpers_ab352c6c17de0d97488e487299dd84b3a}\label{classHelpers_ab352c6c17de0d97488e487299dd84b3a}} 
+\index{Helpers@{Helpers}!addVarUpdateToIEElement@{addVarUpdateToIEElement}}
+\index{addVarUpdateToIEElement@{addVarUpdateToIEElement}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{addVarUpdateToIEElement()}{addVarUpdateToIEElement()}}
+{\footnotesize\ttfamily void Helpers\+::add\+Var\+Update\+To\+IEElement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structInformationElement}{Information\+Element}} $\ast$}]{information\+Element,  }\item[{\mbox{\hyperlink{structDBEntry}{DBEntry}} $\ast$}]{db\+Entry,  }\item[{size\+\_\+t $\ast$}]{current\+Payload\+Size }\end{DoxyParamCaption})}
+
+
+
+Adds a Var\+Update object to the Information Element (IE) Ie\+List. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em information\+Element} & Pointer to the \mbox{\hyperlink{structInformationElement}{Information\+Element}} object \\
+\hline
+{\em db\+Entry} & Pointer to the \mbox{\hyperlink{structDBEntry}{DBEntry}} object containing data to create the Var\+Update object. \\
+\hline
+{\em current\+Payload\+Size} & Pointer to the size\+\_\+t variable tracking the current payload size. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHelpers_a76f611acabc9a472f5374a2e31a42864}\label{classHelpers_a76f611acabc9a472f5374a2e31a42864}} 
+\index{Helpers@{Helpers}!deserializeBytes@{deserializeBytes}}
+\index{deserializeBytes@{deserializeBytes}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{deserializeBytes()}{deserializeBytes()}}
+{\footnotesize\ttfamily std\+::vector$<$uint8\+\_\+t$>$ Helpers\+::deserialize\+Bytes (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Deserializes a byte vector from a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer from which the byte vector will be deserialized. \\
+\hline
+{\em offset} & Reference to the current offset in the buffer, which will be updated after deserialization. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deserialized byte vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelpers_aa87471b3a31b84f9769ad4f91319f5f9}\label{classHelpers_aa87471b3a31b84f9769ad4f91319f5f9}} 
+\index{Helpers@{Helpers}!deserializeExtendedSafetyData@{deserializeExtendedSafetyData}}
+\index{deserializeExtendedSafetyData@{deserializeExtendedSafetyData}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{deserializeExtendedSafetyData()}{deserializeExtendedSafetyData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structExtendedSafetyData}{Extended\+Safety\+Data}} Helpers\+::deserialize\+Extended\+Safety\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Deserializes an \mbox{\hyperlink{structExtendedSafetyData}{Extended\+Safety\+Data}} object from a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer from which the \mbox{\hyperlink{structExtendedSafetyData}{Extended\+Safety\+Data}} will be deserialized. \\
+\hline
+{\em offset} & Reference to the current offset in the buffer, which will be updated after deserialization. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deserialized \mbox{\hyperlink{structExtendedSafetyData}{Extended\+Safety\+Data}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelpers_a805cefbb5f0f4c028f508c5df35628d2}\label{classHelpers_a805cefbb5f0f4c028f508c5df35628d2}} 
+\index{Helpers@{Helpers}!deserializeInformationElement@{deserializeInformationElement}}
+\index{deserializeInformationElement@{deserializeInformationElement}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{deserializeInformationElement()}{deserializeInformationElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structInformationElement}{Information\+Element}} Helpers\+::deserialize\+Information\+Element (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Deserializes an \mbox{\hyperlink{structInformationElement}{Information\+Element}} object from a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer from which the \mbox{\hyperlink{structInformationElement}{Information\+Element}} will be deserialized. \\
+\hline
+{\em offset} & Reference to the current offset in the buffer, which will be updated after deserialization. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deserialized \mbox{\hyperlink{structInformationElement}{Information\+Element}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelpers_abda4fc83d49db46c8cb8c66f43f1a5e8}\label{classHelpers_abda4fc83d49db46c8cb8c66f43f1a5e8}} 
+\index{Helpers@{Helpers}!deserializeInt@{deserializeInt}}
+\index{deserializeInt@{deserializeInt}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{deserializeInt()}{deserializeInt()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T Helpers\+::deserialize\+Int (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Deserializes an integer value from a byte buffer. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the integer to deserialize. Must be an integral type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer from which the integer will be deserialized. \\
+\hline
+{\em offset} & Reference to the current offset in the buffer, which will be updated after deserialization. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deserialized integer value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelpers_ad6a93293a4aa94be3e2329cba627e220}\label{classHelpers_ad6a93293a4aa94be3e2329cba627e220}} 
+\index{Helpers@{Helpers}!deserializeSafetyData@{deserializeSafetyData}}
+\index{deserializeSafetyData@{deserializeSafetyData}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{deserializeSafetyData()}{deserializeSafetyData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSafetyData}{Safety\+Data}} Helpers\+::deserialize\+Safety\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Deserializes a \mbox{\hyperlink{structSafetyData}{Safety\+Data}} object from a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer from which the \mbox{\hyperlink{structSafetyData}{Safety\+Data}} will be deserialized. \\
+\hline
+{\em offset} & Reference to the current offset in the buffer, which will be updated after deserialization. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deserialized \mbox{\hyperlink{structSafetyData}{Safety\+Data}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelpers_a41cc09568f0d3c32477b50d944880534}\label{classHelpers_a41cc09568f0d3c32477b50d944880534}} 
+\index{Helpers@{Helpers}!deserializeString@{deserializeString}}
+\index{deserializeString@{deserializeString}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{deserializeString()}{deserializeString()}}
+{\footnotesize\ttfamily std\+::string Helpers\+::deserialize\+String (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Deserializes a string from a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer from which the string will be deserialized. \\
+\hline
+{\em offset} & Reference to the current offset in the buffer, which will be updated after deserialization. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deserialized string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelpers_a1fe292fee2649c79dc6b43ebf00f2d33}\label{classHelpers_a1fe292fee2649c79dc6b43ebf00f2d33}} 
+\index{Helpers@{Helpers}!deserializeVarCreate@{deserializeVarCreate}}
+\index{deserializeVarCreate@{deserializeVarCreate}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{deserializeVarCreate()}{deserializeVarCreate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVarCreate}{Var\+Create}} Helpers\+::deserialize\+Var\+Create (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Deserializes a \mbox{\hyperlink{structVarCreate}{Var\+Create}} object from a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer from which the \mbox{\hyperlink{structVarCreate}{Var\+Create}} will be deserialized. \\
+\hline
+{\em offset} & Reference to the current offset in the buffer, which will be updated after deserialization. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deserialized \mbox{\hyperlink{structVarCreate}{Var\+Create}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelpers_a0368611976c1c42c03a8148badf66987}\label{classHelpers_a0368611976c1c42c03a8148badf66987}} 
+\index{Helpers@{Helpers}!deserializeVarCreateList@{deserializeVarCreateList}}
+\index{deserializeVarCreateList@{deserializeVarCreateList}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{deserializeVarCreateList()}{deserializeVarCreateList()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structVarCreate}{Var\+Create}}$>$ Helpers\+::deserialize\+Var\+Create\+List (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Deserializes a list of \mbox{\hyperlink{structVarCreate}{Var\+Create}} objects from a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer from which the \mbox{\hyperlink{structVarCreate}{Var\+Create}} list will be deserialized. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deserialized list of \mbox{\hyperlink{structVarCreate}{Var\+Create}} objects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelpers_a2bd9fbe56c6a9b4ad8e5eb7f28b22e6a}\label{classHelpers_a2bd9fbe56c6a9b4ad8e5eb7f28b22e6a}} 
+\index{Helpers@{Helpers}!deserializeVarIdList@{deserializeVarIdList}}
+\index{deserializeVarIdList@{deserializeVarIdList}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{deserializeVarIdList()}{deserializeVarIdList()}}
+{\footnotesize\ttfamily std\+::vector$<$uint8\+\_\+t$>$ Helpers\+::deserialize\+Var\+Id\+List (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Deserializes a vector of Var\+Id (uint8\+\_\+t) variables from a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer from which the Var\+Id vector will be deserialized. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deserialized vector of Var\+Id variables. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelpers_a703d4fe16bea33e7a611bce11bcd6606}\label{classHelpers_a703d4fe16bea33e7a611bce11bcd6606}} 
+\index{Helpers@{Helpers}!deserializeVarSpec@{deserializeVarSpec}}
+\index{deserializeVarSpec@{deserializeVarSpec}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{deserializeVarSpec()}{deserializeVarSpec()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVarSpec}{Var\+Spec}} Helpers\+::deserialize\+Var\+Spec (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Deserializes a \mbox{\hyperlink{structVarSpec}{Var\+Spec}} object from a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer from which the \mbox{\hyperlink{structVarSpec}{Var\+Spec}} will be deserialized. \\
+\hline
+{\em offset} & Reference to the current offset in the buffer, which will be updated after deserialization. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deserialized \mbox{\hyperlink{structVarSpec}{Var\+Spec}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelpers_adad49739fbeb0abd84442bc556729061}\label{classHelpers_adad49739fbeb0abd84442bc556729061}} 
+\index{Helpers@{Helpers}!deserializeVarSumm@{deserializeVarSumm}}
+\index{deserializeVarSumm@{deserializeVarSumm}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{deserializeVarSumm()}{deserializeVarSumm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVarSumm}{Var\+Summ}} Helpers\+::deserialize\+Var\+Summ (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Deserializes a \mbox{\hyperlink{structVarSumm}{Var\+Summ}} object from a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer from which the \mbox{\hyperlink{structVarSumm}{Var\+Summ}} will be deserialized. \\
+\hline
+{\em offset} & Reference to the current offset in the buffer, which will be updated after deserialization. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deserialized \mbox{\hyperlink{structVarSumm}{Var\+Summ}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelpers_a494873bd54fbff3f0f2b12c4d8dfd12f}\label{classHelpers_a494873bd54fbff3f0f2b12c4d8dfd12f}} 
+\index{Helpers@{Helpers}!deserializeVarSummList@{deserializeVarSummList}}
+\index{deserializeVarSummList@{deserializeVarSummList}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{deserializeVarSummList()}{deserializeVarSummList()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structVarSumm}{Var\+Summ}}$>$ Helpers\+::deserialize\+Var\+Summ\+List (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Deserializes a vector of \mbox{\hyperlink{structVarSumm}{Var\+Summ}} variables from a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer from which the \mbox{\hyperlink{structVarSumm}{Var\+Summ}} vector will be deserialized. \\
+\hline
+{\em num\+Var\+Summs} & Number of \mbox{\hyperlink{structVarSumm}{Var\+Summ}} objects to deserialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deserialized vector of \mbox{\hyperlink{structVarSumm}{Var\+Summ}} variables. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelpers_a0fa48027ebd09c5f1c2f004fcf354aae}\label{classHelpers_a0fa48027ebd09c5f1c2f004fcf354aae}} 
+\index{Helpers@{Helpers}!deserializeVarUpd@{deserializeVarUpd}}
+\index{deserializeVarUpd@{deserializeVarUpd}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{deserializeVarUpd()}{deserializeVarUpd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVarUpd}{Var\+Upd}} Helpers\+::deserialize\+Var\+Upd (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{size\+\_\+t \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Deserializes a \mbox{\hyperlink{structVarUpd}{Var\+Upd}} object from a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer from which the \mbox{\hyperlink{structVarUpd}{Var\+Upd}} will be deserialized. \\
+\hline
+{\em offset} & Reference to the current offset in the buffer, which will be updated after deserialization. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deserialized \mbox{\hyperlink{structVarUpd}{Var\+Upd}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelpers_a95455a4410138e11e53a064e919ebbd8}\label{classHelpers_a95455a4410138e11e53a064e919ebbd8}} 
+\index{Helpers@{Helpers}!deserializeVarUpdList@{deserializeVarUpdList}}
+\index{deserializeVarUpdList@{deserializeVarUpdList}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{deserializeVarUpdList()}{deserializeVarUpdList()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structVarUpd}{Var\+Upd}}$>$ Helpers\+::deserialize\+Var\+Upd\+List (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Deserializes a vector of \mbox{\hyperlink{structVarUpd}{Var\+Upd}} variables from a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer from which the \mbox{\hyperlink{structVarUpd}{Var\+Upd}} vector will be deserialized. \\
+\hline
+{\em num\+Var\+Upds} & Number of \mbox{\hyperlink{structVarUpd}{Var\+Upd}} objects to deserialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deserialized vector of \mbox{\hyperlink{structVarUpd}{Var\+Upd}} variables. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelpers_ae4df790489b49e70bb3605a36b449cc6}\label{classHelpers_ae4df790489b49e70bb3605a36b449cc6}} 
+\index{Helpers@{Helpers}!getNodeIdentifier@{getNodeIdentifier}}
+\index{getNodeIdentifier@{getNodeIdentifier}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{getNodeIdentifier()}{getNodeIdentifier()}}
+{\footnotesize\ttfamily Node\+Identifier Helpers\+::get\+Node\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the MAC address of the current NIC. Used as a unique identifier. 
+
+\begin{DoxyReturn}{Returns}
+Node\+Identifier (std\+::string) of the MAC address 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelpers_a0f841e7646d19513081df284b65280a6}\label{classHelpers_a0f841e7646d19513081df284b65280a6}} 
+\index{Helpers@{Helpers}!serializeBytes@{serializeBytes}}
+\index{serializeBytes@{serializeBytes}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{serializeBytes()}{serializeBytes()}}
+{\footnotesize\ttfamily void Helpers\+::serialize\+Bytes (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Serializes a byte vector into a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer where the byte vector will be serialized. \\
+\hline
+{\em data} & The byte vector to serialize. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHelpers_adf111219d36645c6da70d57415711ce1}\label{classHelpers_adf111219d36645c6da70d57415711ce1}} 
+\index{Helpers@{Helpers}!serializeExtendedSafetyData@{serializeExtendedSafetyData}}
+\index{serializeExtendedSafetyData@{serializeExtendedSafetyData}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{serializeExtendedSafetyData()}{serializeExtendedSafetyData()}}
+{\footnotesize\ttfamily void Helpers\+::serialize\+Extended\+Safety\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{const \mbox{\hyperlink{structExtendedSafetyData}{Extended\+Safety\+Data}} \&}]{extened\+Safety\+Data }\end{DoxyParamCaption})}
+
+
+
+Serializes an \mbox{\hyperlink{structExtendedSafetyData}{Extended\+Safety\+Data}} object into a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer where the \mbox{\hyperlink{structExtendedSafetyData}{Extended\+Safety\+Data}} will be serialized. \\
+\hline
+{\em extended\+Safety\+Data} & The \mbox{\hyperlink{structExtendedSafetyData}{Extended\+Safety\+Data}} object to serialize. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHelpers_a9c5b3dc58df252790399500b2fdaffe5}\label{classHelpers_a9c5b3dc58df252790399500b2fdaffe5}} 
+\index{Helpers@{Helpers}!serializeInformationElement@{serializeInformationElement}}
+\index{serializeInformationElement@{serializeInformationElement}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{serializeInformationElement()}{serializeInformationElement()}}
+{\footnotesize\ttfamily void Helpers\+::serialize\+Information\+Element (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{const \mbox{\hyperlink{structInformationElement}{Information\+Element}} \&}]{information\+Element }\end{DoxyParamCaption})}
+
+
+
+Serializes an \mbox{\hyperlink{structInformationElement}{Information\+Element}} object into a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer where the \mbox{\hyperlink{structInformationElement}{Information\+Element}} will be serialized. \\
+\hline
+{\em information\+Element} & The \mbox{\hyperlink{structInformationElement}{Information\+Element}} object to serialize. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHelpers_ae6034de31a71a7606b41153b835523b5}\label{classHelpers_ae6034de31a71a7606b41153b835523b5}} 
+\index{Helpers@{Helpers}!serializeInt@{serializeInt}}
+\index{serializeInt@{serializeInt}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{serializeInt()}{serializeInt()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Helpers\+::serialize\+Int (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{T}]{value }\end{DoxyParamCaption})}
+
+
+
+Serializes an integer value into a byte buffer. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the integer to serialize. Must be an integral type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer where the integer will be serialized. \\
+\hline
+{\em value} & The integer value to serialize. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHelpers_aa1a7be12d685531b3eab7df1956948d7}\label{classHelpers_aa1a7be12d685531b3eab7df1956948d7}} 
+\index{Helpers@{Helpers}!serializeSafetyData@{serializeSafetyData}}
+\index{serializeSafetyData@{serializeSafetyData}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{serializeSafetyData()}{serializeSafetyData()}}
+{\footnotesize\ttfamily void Helpers\+::serialize\+Safety\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{const \mbox{\hyperlink{structSafetyData}{Safety\+Data}} \&}]{safety\+Data }\end{DoxyParamCaption})}
+
+
+
+Serializes a \mbox{\hyperlink{structSafetyData}{Safety\+Data}} object into a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer where the \mbox{\hyperlink{structSafetyData}{Safety\+Data}} will be serialized. \\
+\hline
+{\em safety\+Data} & The \mbox{\hyperlink{structSafetyData}{Safety\+Data}} object to serialize. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHelpers_ac9eab9b969d116e0a9b3740f4574fa71}\label{classHelpers_ac9eab9b969d116e0a9b3740f4574fa71}} 
+\index{Helpers@{Helpers}!serializeString@{serializeString}}
+\index{serializeString@{serializeString}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{serializeString()}{serializeString()}}
+{\footnotesize\ttfamily void Helpers\+::serialize\+String (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Serializes a string into a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer where the string will be serialized. \\
+\hline
+{\em str} & The string to serialize. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHelpers_aba8b017afe0864b798557267c6b55f22}\label{classHelpers_aba8b017afe0864b798557267c6b55f22}} 
+\index{Helpers@{Helpers}!serializeVarCreate@{serializeVarCreate}}
+\index{serializeVarCreate@{serializeVarCreate}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{serializeVarCreate()}{serializeVarCreate()}}
+{\footnotesize\ttfamily void Helpers\+::serialize\+Var\+Create (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{const \mbox{\hyperlink{structVarCreate}{Var\+Create}} \&}]{var\+Create }\end{DoxyParamCaption})}
+
+
+
+Serializes a \mbox{\hyperlink{structVarCreate}{Var\+Create}} object into a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer where the \mbox{\hyperlink{structVarCreate}{Var\+Create}} will be serialized. \\
+\hline
+{\em var\+Create} & The \mbox{\hyperlink{structVarCreate}{Var\+Create}} object to serialize. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHelpers_af1763811c52943f3f3a4f14635c2ab98}\label{classHelpers_af1763811c52943f3f3a4f14635c2ab98}} 
+\index{Helpers@{Helpers}!serializeVarCreateList@{serializeVarCreateList}}
+\index{serializeVarCreateList@{serializeVarCreateList}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{serializeVarCreateList()}{serializeVarCreateList()}}
+{\footnotesize\ttfamily std\+::vector$<$uint8\+\_\+t$>$ Helpers\+::serialize\+Var\+Create\+List (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structVarCreate}{Var\+Create}} $>$ \&}]{var\+Create\+List }\end{DoxyParamCaption})}
+
+
+
+Serializes a list of \mbox{\hyperlink{structVarCreate}{Var\+Create}} objects into a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var\+Create\+List} & The list of \mbox{\hyperlink{structVarCreate}{Var\+Create}} objects to serialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A byte buffer containing the serialized \mbox{\hyperlink{structVarCreate}{Var\+Create}} objects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelpers_ab1e93f256cfe10df4bc5a65f6b4b0960}\label{classHelpers_ab1e93f256cfe10df4bc5a65f6b4b0960}} 
+\index{Helpers@{Helpers}!serializeVarSpec@{serializeVarSpec}}
+\index{serializeVarSpec@{serializeVarSpec}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{serializeVarSpec()}{serializeVarSpec()}}
+{\footnotesize\ttfamily void Helpers\+::serialize\+Var\+Spec (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{const \mbox{\hyperlink{structVarSpec}{Var\+Spec}} \&}]{spec }\end{DoxyParamCaption})}
+
+
+
+Serializes a \mbox{\hyperlink{structVarSpec}{Var\+Spec}} object into a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer where the \mbox{\hyperlink{structVarSpec}{Var\+Spec}} will be serialized. \\
+\hline
+{\em spec} & The \mbox{\hyperlink{structVarSpec}{Var\+Spec}} object to serialize. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHelpers_a557055c3c0962d13bb99bf1d0d74c098}\label{classHelpers_a557055c3c0962d13bb99bf1d0d74c098}} 
+\index{Helpers@{Helpers}!serializeVarSumm@{serializeVarSumm}}
+\index{serializeVarSumm@{serializeVarSumm}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{serializeVarSumm()}{serializeVarSumm()}}
+{\footnotesize\ttfamily void Helpers\+::serialize\+Var\+Summ (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{const \mbox{\hyperlink{structVarSumm}{Var\+Summ}} \&}]{var\+Summ }\end{DoxyParamCaption})}
+
+
+
+Serializes a \mbox{\hyperlink{structVarSumm}{Var\+Summ}} object into a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer where the \mbox{\hyperlink{structVarSumm}{Var\+Summ}} will be serialized. \\
+\hline
+{\em var\+Create} & The \mbox{\hyperlink{structVarSumm}{Var\+Summ}} object to serialize. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHelpers_add7e82bafca7c9e37912cadebdd7da06}\label{classHelpers_add7e82bafca7c9e37912cadebdd7da06}} 
+\index{Helpers@{Helpers}!serializeVarUpd@{serializeVarUpd}}
+\index{serializeVarUpd@{serializeVarUpd}!Helpers@{Helpers}}
+\doxysubsubsection{\texorpdfstring{serializeVarUpd()}{serializeVarUpd()}}
+{\footnotesize\ttfamily void Helpers\+::serialize\+Var\+Upd (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer,  }\item[{const \mbox{\hyperlink{structVarUpd}{Var\+Upd}} \&}]{upd }\end{DoxyParamCaption})}
+
+
+
+Serializes a \mbox{\hyperlink{structVarUpd}{Var\+Upd}} object into a byte buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to the byte buffer where the \mbox{\hyperlink{structVarUpd}{Var\+Upd}} will be serialized. \\
+\hline
+{\em upd} & The \mbox{\hyperlink{structVarUpd}{Var\+Upd}} object to serialize. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/dcp/Helpers.\+h\end{DoxyCompactItemize}

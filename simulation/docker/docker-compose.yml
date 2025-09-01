@@ -1,0 +1,17 @@
+services:
+  drone:
+    image: drone:humble
+    container_name: "drone_${DRONE_ID}_container"
+    stdin_open: true
+    tty: true
+    environment:
+      - DISPLAY=${DISPLAY}
+      - DRONE_ID=${DRONE_ID}
+      - DRONE_CONFIG_FOLDER_PATH=/home/ros/drones/uav-formations-fyp-2024/simulation/configs
+      - DRONE_STATE_FOLDER_PATH=/home/ros/drones/uav-formations-fyp-2024/simulation/config_states
+    volumes:
+      - ${HOST_WS_PATH}:/home/ros/drones/uav-formations-fyp-2024
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    network_mode: "host"
+    privileged: true
+    command: bash

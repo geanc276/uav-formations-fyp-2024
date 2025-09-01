@@ -1,0 +1,7 @@
+<map id="BPPayloadBlock" name="BPPayloadBlock">
+<area shape="rect" id="node1" title=" " alt="" coords="129,184,255,211"/>
+<area shape="rect" id="node2" href="$structBPPayloadBlockHeader.html" title=" " alt="" coords="105,95,279,121"/>
+<area shape="rect" id="node3" href="$structBPProtocolId.html" title=" " alt="" coords="5,5,109,32"/>
+<area shape="rect" id="node4" href="$structBPDroneName.html" title=" " alt="" coords="133,5,251,32"/>
+<area shape="rect" id="node5" href="$structBPLength.html" title=" " alt="" coords="275,5,357,32"/>
+</map>

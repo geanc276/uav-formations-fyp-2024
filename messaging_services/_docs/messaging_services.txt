@@ -1,0 +1,15 @@
+-each of these are messaging services run on the drone
+-they run as a linux service
+-- this is controlled by the .service files
+-- controlled with sudo systemctl [status, start, stop, restart, enable, disable] -> give desrciption for each of these options
+-- logs with sudo journalctl -u [name].service
+---flags
+---- -r is reverse
+---- -u is unit name
+---- -another example
+
+--typical serivce file contains
+---name
+--- execstart, execute on start
+--- After , run After
+--- (do the rest)

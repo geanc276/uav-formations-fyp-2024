@@ -1,0 +1,17 @@
+[Unit]
+Description=ROS message forwarder for status
+After=network.target avahi-daemon.service
+
+[Service]
+ExecStart=/bin/bash -c "source /opt/ros/humble/setup.bash && \
+source /home/swarm_software/launch/drone_launch/install/setup.bash && \
+python3 /home/swarm_software/messaging_services/mission/mission_status_pub.py"
+Environment="PYTHONPATH=/home/swarm_software"
+Restart=always
+User=root
+WorkingDirectory=/home/swarm_software/messaging_services
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

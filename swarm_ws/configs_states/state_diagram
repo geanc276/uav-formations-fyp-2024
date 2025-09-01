@@ -1,0 +1,52 @@
+// State Diagram
+digraph {
+	size="30.0,8.5!"
+	rankdir=LR
+	splines=ortho
+	subgraph cluster_onboard {
+		color="#E0E0E0" label="Onboard States" style=filled
+		configure [label=configure color=black fillcolor="#ADD8E6" fontname=Helvetica fontsize=12 shape=ellipse style=filled]
+		start [label=start color=black fillcolor="#ADD8E6" fontname=Helvetica fontsize=12 shape=ellipse style=filled]
+		takeoff [label=takeoff color=black fillcolor="#ADD8E6" fontname=Helvetica fontsize=12 shape=ellipse style=filled]
+		return [label=return color=black fillcolor="#ADD8E6" fontname=Helvetica fontsize=12 shape=ellipse style=filled]
+		land [label=land color=black fillcolor="#ADD8E6" fontname=Helvetica fontsize=12 shape=ellipse style=filled]
+	}
+	subgraph cluster_offboard {
+		color="#FFF2CC" label="Offboard States" style=filled
+		rendezvous [label=rendezvous color=black fillcolor="#FFA500" fontname=Helvetica fontsize=14 penwidth=2 shape=doubleoctagon style="filled,bold"]
+		move [label=move color=black fillcolor="#FFA500" fontname=Helvetica fontsize=14 penwidth=2 shape=doubleoctagon style="filled,bold"]
+	}
+	subgraph cluster_hold_pause {
+		color="#F0FFF0" label="Hold/Pause States" style=filled
+		pause [label=pause color=black fillcolor="#90EE90" fontname=Helvetica fontsize=12 shape=rectangle style="filled,rounded"]
+		px4_hold [label=px4_hold color=black fillcolor="#90EE90" fontname=Helvetica fontsize=12 shape=rectangle style="filled,rounded"]
+	}
+	start [color=black fillcolor="#FFD700" fontname=Helvetica fontsize=12 shape=circle style=filled]
+	configure -> start [label="" arrowsize=0.8 color="#7DCEA0" fontname=Helvetica fontsize=10]
+	start -> takeoff [label="" arrowsize=0.8 color="#7DCEA0" fontname=Helvetica fontsize=10]
+	start -> pause [label="" arrowsize=1.0 color="#FF4500" fontname=Helvetica fontsize=10 penwidth=2]
+	start -> px4_hold [label="" arrowsize=1.0 color="#FF4500" fontname=Helvetica fontsize=10 penwidth=2]
+	takeoff -> rendezvous [label="" arrowsize=1.0 color="#FF4500" fontname=Helvetica fontsize=10 penwidth=2]
+	takeoff -> pause [label="" arrowsize=1.0 color="#FF4500" fontname=Helvetica fontsize=10 penwidth=2]
+	takeoff -> px4_hold [label="" arrowsize=1.0 color="#FF4500" fontname=Helvetica fontsize=10 penwidth=2]
+	rendezvous -> pause [label="" arrowsize=1.2 color="#800080" fontname=Helvetica fontsize=10 penwidth=3 style=dashed]
+	rendezvous -> move [label="" arrowsize=1.0 color="#FF4500" fontname=Helvetica fontsize=10 penwidth=2]
+	rendezvous -> px4_hold [label="" arrowsize=1.2 color="#800080" fontname=Helvetica fontsize=10 penwidth=3 style=dashed]
+	rendezvous -> return [label="" arrowsize=1.0 color="#FF4500" fontname=Helvetica fontsize=10 penwidth=2]
+	rendezvous -> land [label="" arrowsize=1.0 color="#FF4500" fontname=Helvetica fontsize=10 penwidth=2]
+	pause -> move [label="" arrowsize=1.2 color="#800080" fontname=Helvetica fontsize=10 penwidth=3 style=dashed]
+	pause -> px4_hold [label="" arrowsize=1.2 color="#800080" fontname=Helvetica fontsize=10 penwidth=3 style=dashed]
+	pause -> return [label="" arrowsize=1.0 color="#FF4500" fontname=Helvetica fontsize=10 penwidth=2]
+	pause -> land [label="" arrowsize=1.0 color="#FF4500" fontname=Helvetica fontsize=10 penwidth=2]
+	move -> pause [label="" arrowsize=1.2 color="#800080" fontname=Helvetica fontsize=10 penwidth=3 style=dashed]
+	move -> px4_hold [label="" arrowsize=1.2 color="#800080" fontname=Helvetica fontsize=10 penwidth=3 style=dashed]
+	move -> land [label="" arrowsize=1.0 color="#FF4500" fontname=Helvetica fontsize=10 penwidth=2]
+	px4_hold -> move [label="" arrowsize=1.2 color="#800080" fontname=Helvetica fontsize=10 penwidth=3 style=dashed]
+	px4_hold -> return [label="" arrowsize=1.0 color="#FF4500" fontname=Helvetica fontsize=10 penwidth=2]
+	px4_hold -> land [label="" arrowsize=1.0 color="#FF4500" fontname=Helvetica fontsize=10 penwidth=2]
+	return -> start [label="" arrowsize=0.8 color="#7DCEA0" fontname=Helvetica fontsize=10]
+	return -> land [label="" arrowsize=0.8 color="#7DCEA0" fontname=Helvetica fontsize=10]
+	return -> px4_hold [label="" arrowsize=1.0 color="#FF4500" fontname=Helvetica fontsize=10 penwidth=2]
+	return -> move [label="" arrowsize=1.0 color="#FF4500" fontname=Helvetica fontsize=10 penwidth=2]
+	land -> start [label="" arrowsize=0.8 color="#7DCEA0" fontname=Helvetica fontsize=10]
+}

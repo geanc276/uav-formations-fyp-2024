@@ -1,0 +1,9 @@
+- a python package that runs on the drones
+- it advertises itself as usign mdnss (e.g. apples Bonjour)
+- advertises the inmpoirtant information to connect to the drone -- allowing auto connection
+-- ip
+-- hostname
+-- port
+-- api_port
+-- available commands
+

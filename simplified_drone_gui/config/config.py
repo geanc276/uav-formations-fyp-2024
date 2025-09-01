@@ -1,0 +1,6 @@
+# config.py
+
+BACKEND_IP = '192.168.0.10'
+BACKEND_PORT = 8000
+BACKEND_USERNAME = 'drone'
+BACKEND_PASSWORD = 'pass'
