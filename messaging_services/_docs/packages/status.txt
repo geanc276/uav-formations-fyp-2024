@@ -1,4 +1,0 @@
-- python script that collects info about the drones status , 
--- eg
---- if launched
---- what configs it has
